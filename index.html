@@ -998,31 +998,60 @@
         // slide-1 -> slide-2 텍스트 교차 페이드 애니메이션
         // ==========================================
 
-        // 1. slide-1 텍스트 스크롤 시 서서히 사라짐
-        gsap.to(".slide-1 .slide-content", {
-            scrollTrigger: {
-                trigger: ".slide-1",
-                start: "top top",     // slide-1이 화면 상단에 닿았을 때 (스크롤 시작)
-                end: "bottom 50%",    // slide-1의 하단이 화면 중간에 올 때 완전히 사라짐
-                scrub: 1
-            },
-            opacity: 0,
-            y: -50
+        let mm = gsap.matchMedia();
+
+        // 1. 데스크탑 (PC) - 텍스트 교차 페이드 (자연스럽게 겹치며 전환)
+        mm.add("(min-width: 769px)", () => {
+            gsap.to(".slide-1 .slide-content", {
+                scrollTrigger: {
+                    trigger: ".slide-2",
+                    start: "top 100%",    // slide-2가 보이기 시작할 때 (스크롤 시작)
+                    end: "top 50%",       // slide-2가 중간에 올 때 완전히 사라짐
+                    scrub: 1
+                },
+                opacity: 0,
+                y: -50
+            });
+
+            gsap.set(".slide-2 .slide-content", { opacity: 0, y: 50 });
+
+            gsap.to(".slide-2 .slide-content", {
+                scrollTrigger: {
+                    trigger: ".slide-2",
+                    start: "top 70%",     // slide-2가 30% 정도 올라왔을 때 나타나기 시작 (PC는 여기서 겹침)
+                    end: "top 20%",
+                    scrub: 1
+                },
+                opacity: 1,
+                y: 0
+            });
         });
 
-        // 2. slide-2 텍스트 초기 상태 세팅 (투명하고 살짝 아래에 위치)
-        gsap.set(".slide-2 .slide-content", { opacity: 0, y: 50 });
+        // 2. 모바일 - 겹치지 않고 순서대로 전환 (slide-1 사라진 후 slide-2 나타남)
+        mm.add("(max-width: 768px)", () => {
+            gsap.to(".slide-1 .slide-content", {
+                scrollTrigger: {
+                    trigger: ".slide-2",
+                    start: "top 100%",    // slide-2가 보이기 시작할 때
+                    end: "top 75%",       // slide-2가 25% 정도 올라왔을 때 완전히 사라짐 (빠르게 사라짐)
+                    scrub: 1
+                },
+                opacity: 0,
+                y: -50
+            });
 
-        // 3. slide-2 텍스트 스크롤 시 서서히 나타남
-        gsap.to(".slide-2 .slide-content", {
-            scrollTrigger: {
-                trigger: ".slide-2",
-                start: "top 70%",     // slide-2가 화면에 30% 정도 올라왔을 때 시작
-                end: "top 20%",       // slide-2가 화면 상단 부근에 올 때 완성
-                scrub: 1
-            },
-            opacity: 1,
-            y: 0
+            gsap.set(".slide-2 .slide-content", { opacity: 0, y: 50 });
+
+            gsap.to(".slide-2 .slide-content", {
+                scrollTrigger: {
+                    trigger: ".slide-2",
+                    start: "top 60%",     // 1번 텍스트가 완전히 사라진(75%) 이후부터 나타나기 시작 (겹치지 않음)
+                    end: "top 20%",
+                    scrub: 1
+                },
+                opacity: 1,
+                y: 0
+            });
         });
 
         // 스크롤 한 번에 다음 슬라이드가 정중앙에 스냅(snap)되며, 
