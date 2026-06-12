@@ -158,7 +158,7 @@
             background-image: url('./배경/횡단보도@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: cover;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
@@ -166,7 +166,7 @@
             background-image: url('./배경/횡단보도 다음@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: cover;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
@@ -399,12 +399,11 @@
 
 
         /* slide-8 */
-
         .slide-8 {
-            background-image: url('./배경/153@2x.png');
+            background-image: url('./배경/8@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             position: relative;
         }
@@ -437,6 +436,19 @@
             display: block;
         }
 
+        .slide-8-5 {
+            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+            min-height: 80.5vh !important;
+            height: 80.5vh !important;
+
+            background-image: url('./배경/8.5@2x.png');
+            background-attachment: scroll;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            align-items: flex-end;
+            scroll-snap-align: end !important;
+        }
 
         /* slide-9 */
         .slide-9 {
@@ -465,10 +477,10 @@
 
         /* slide-10 */
         .slide-10 {
-            background-image: url('./배경/156@2x.png');
+            background-image: url('./배경/10@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             position: relative;
         }
@@ -483,13 +495,27 @@
             display: block;
         }
 
+        .slide-10-5 {
+            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+            min-height: 80.5vh !important;
+            height: 80.5vh !important;
+
+            background-image: url('./배경/10.5@2x.png');
+            background-attachment: scroll;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            align-items: flex-end;
+            scroll-snap-align: end !important;
+        }
+
 
         /* slide-11 */
         .slide-11 {
             background-image: url('./배경/175@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -499,7 +525,7 @@
             background-image: url('./배경/12@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -509,7 +535,7 @@
             background-image: url('./배경/13@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -519,7 +545,7 @@
             background-image: url('./배경/14@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -529,7 +555,7 @@
             background-image: url('./배경/15@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -539,7 +565,7 @@
             background-image: url('./배경/16@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -553,7 +579,7 @@
             background-image: url('./배경/16.5@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
             scroll-snap-align: end !important;
@@ -563,7 +589,7 @@
             background-image: url('./배경/17@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -577,7 +603,7 @@
             background-image: url('./배경/17.5@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
             scroll-snap-align: end !important;
@@ -587,7 +613,7 @@
             background-image: url('./배경/18@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -597,7 +623,7 @@
             background-image: url('./배경/19@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -608,6 +634,8 @@
         .slide-2,
         .slide-3,
         .slide-4,
+        .slide-8-5,
+        .slide-10-5,
         .slide-11,
         .slide-12,
         .slide-13,
@@ -1030,6 +1058,9 @@
         </div>
     </section>
 
+    <section class="medium-slide slide-8-5">
+        <div class="slide-content"></div>
+    </section>
 
     <!-- slide-9 -->
     <section class="scrolling-slide slide-9">
@@ -1045,6 +1076,10 @@
             <h2>다양한 취미와 문화생활,<br>그리고 여러 관계 속에서 새롭게 표현되고 있습니다</h2>
             <img src="./오브젝트/활동무엇.png" alt="연애를 대체할 만큼 만족감을 주는 활동이 무엇인가요?" class="what-activity-obj">
         </div>
+    </section>
+
+    <section class="medium-slide slide-10-5">
+        <div class="slide-content"></div>
     </section>
 
     <!-- slide-11 -->
