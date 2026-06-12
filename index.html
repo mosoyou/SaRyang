@@ -637,9 +637,6 @@
         .slide-8-5,
         .slide-10-5,
         .slide-11,
-        .slide-12,
-        .slide-13,
-        .slide-14,
         .slide-15,
         .slide-16,
         .slide-16-5,
@@ -652,6 +649,18 @@
             aspect-ratio: 16 / 9;
             padding: 0 !important;
             margin: 0 !important;
+        }
+
+        /* 12, 13, 14 슬라이드는 좌우 잘림을 막기 위해 img 태그를 사용하며, 비율에 맞게 자동으로 높이를 맞춤 */
+        .slide-12,
+        .slide-13,
+        .slide-14 {
+            min-height: auto !important;
+            height: auto !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            background-image: none !important;
+            display: block !important;
         }
 
         /* ==================================================
@@ -1088,14 +1097,20 @@
     </section>
 
     <section class="slide slide-12">
+        <img src="./배경/12@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
+            alt="slide 12">
         <div class="slide-content"></div>
     </section>
 
     <section class="slide slide-13">
+        <img src="./배경/13@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
+            alt="slide 13">
         <div class="slide-content"></div>
     </section>
 
     <section class="slide slide-14">
+        <img src="./배경/14@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
+            alt="slide 14">
         <div class="slide-content"></div>
     </section>
 
