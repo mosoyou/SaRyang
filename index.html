@@ -712,6 +712,11 @@
                 /* 한글 단어 단위 줄바꿈 */
             }
 
+            /* 부제목 폰트 축소 */
+            .article-desc {
+                font-size: 0.85rem;
+            }
+
             /* 본문 인트로 폰트 축소 */
             .scrolling-slide .intro {
                 font-size: 1rem;
@@ -836,6 +841,10 @@
                 font-size: 1.15rem;
             }
 
+            .article-desc {
+                font-size: 0.75rem;
+            }
+
             .scrolling-slide .intro {
                 font-size: 0.9rem;
                 line-height: 1.65;
@@ -923,7 +932,7 @@
 
     <section class="medium-slide slide-4"></section>
 
-    <section class="slide">
+    <section class="scrolling-slide">
         <img src="./배경/title.png" alt="기사 타이틀 사진" class="title-img-obj">
     </section>
 
@@ -984,6 +993,37 @@
     <script>
         // ScrollTrigger 플러그인 등록
         gsap.registerPlugin(ScrollTrigger);
+
+        // ==========================================
+        // slide-1 -> slide-2 텍스트 교차 페이드 애니메이션
+        // ==========================================
+
+        // 1. slide-1 텍스트 스크롤 시 서서히 사라짐
+        gsap.to(".slide-1 .slide-content", {
+            scrollTrigger: {
+                trigger: ".slide-1",
+                start: "top top",     // slide-1이 화면 상단에 닿았을 때 (스크롤 시작)
+                end: "bottom 50%",    // slide-1의 하단이 화면 중간에 올 때 완전히 사라짐
+                scrub: 1
+            },
+            opacity: 0,
+            y: -50
+        });
+
+        // 2. slide-2 텍스트 초기 상태 세팅 (투명하고 살짝 아래에 위치)
+        gsap.set(".slide-2 .slide-content", { opacity: 0, y: 50 });
+
+        // 3. slide-2 텍스트 스크롤 시 서서히 나타남
+        gsap.to(".slide-2 .slide-content", {
+            scrollTrigger: {
+                trigger: ".slide-2",
+                start: "top 70%",     // slide-2가 화면에 30% 정도 올라왔을 때 시작
+                end: "top 20%",       // slide-2가 화면 상단 부근에 올 때 완성
+                scrub: 1
+            },
+            opacity: 1,
+            y: 0
+        });
 
         // 스크롤 한 번에 다음 슬라이드가 정중앙에 스냅(snap)되며, 
         // 텍스트가 자연스럽게 커지며 들어오고, 작아지며 나가는 다이나믹한 모션 효과
