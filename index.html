@@ -142,7 +142,7 @@
             /* 2. 고정하지 않고 글자와 함께 위로 올라가도록 스크롤 설정 */
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
@@ -150,7 +150,7 @@
             background-image: url('./배경/2@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
@@ -212,7 +212,7 @@
             background-image: url('./배경/검정-핑크@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
@@ -227,7 +227,7 @@
             background-image: url('./배경/연결페이지 1 (핑크)@2x.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: contain;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
             scroll-snap-align: end !important;
@@ -545,7 +545,7 @@
             position: relative;
         }
 
-        .slide-16.5 {
+        .slide-16-5 {
             /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
             min-height: 80.5vh !important;
             height: 80.5vh !important;
@@ -569,7 +569,7 @@
             position: relative;
         }
 
-        .slide-17.5 {
+        .slide-17-5 {
             /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
             min-height: 80.5vh !important;
             height: 80.5vh !important;
@@ -603,6 +603,27 @@
             position: relative;
         }
 
+        /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) PC/모바일 공통 완전 제거 */
+        .slide-3,
+        .slide-4,
+        .slide-11,
+        .slide-12,
+        .slide-13,
+        .slide-14,
+        .slide-15,
+        .slide-16,
+        .slide-16-5,
+        .slide-17,
+        .slide-17-5,
+        .slide-18,
+        .slide-19 {
+            min-height: auto !important;
+            height: auto !important;
+            aspect-ratio: 16 / 9;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
         /* ==================================================
         [모바일 반응형] 768px 이하 화면 대응
         ================================================== */
@@ -621,24 +642,7 @@
                 padding: 40px 20px;
             }
 
-            /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) 완전 제거 */
-            .slide-3,
-            .slide-4,
-            .slide-11,
-            .slide-12,
-            .slide-13,
-            .slide-14,
-            .slide-15,
-            .slide-16,
-            .slide-17,
-            .slide-18,
-            .slide-19 {
-                min-height: auto !important;
-                height: auto !important;
-                aspect-ratio: 16 / 9;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
+
 
             /* 제목 폰트 축소 */
             .article-title {
@@ -816,7 +820,7 @@
 
     <section class="long-slide">
         <div class="slide-content">
-            <div class="article-title">"연애? 이제 필수가 아니"..MZ세대, 사랑보다 '나'를 선택하다</div>
+            <div class="article-title">"연애? 이제 필수가 아니"..MZ세대,사랑보다 '나'를 선택하다</div>
             <div class="article-desc">JIBS제주방송 (2025.02.13)</div>
         </div>
     </section>
@@ -972,7 +976,7 @@
                 end: "+=300%", // 스크롤 거리를 넉넉하게 (3화면분)
                 pin: true,
                 pinSpacing: true,
-                scrub: 1,
+                scrub: 2,
             }
         });
 
@@ -1066,7 +1070,7 @@
         <div class="slide-content"></div>
     </section>
 
-    <section class="medium-slide slide-16.5">
+    <section class="medium-slide slide-16-5">
         <div class="slide-content"></div>
     </section>
 
@@ -1074,7 +1078,7 @@
         <div class="slide-content"></div>
     </section>
 
-    <section class="medium-slide slide-17.5">
+    <section class="medium-slide slide-17-5">
         <div class="slide-content"></div>
     </section>
 
