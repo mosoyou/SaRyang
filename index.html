@@ -621,6 +621,25 @@
                 padding: 40px 20px;
             }
 
+            /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) 완전 제거 */
+            .slide-3,
+            .slide-4,
+            .slide-11,
+            .slide-12,
+            .slide-13,
+            .slide-14,
+            .slide-15,
+            .slide-16,
+            .slide-17,
+            .slide-18,
+            .slide-19 {
+                min-height: auto !important;
+                height: auto !important;
+                aspect-ratio: 16 / 9;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
             /* 제목 폰트 축소 */
             .article-title {
                 font-size: 1.4rem;
