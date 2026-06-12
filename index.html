@@ -290,7 +290,6 @@
             opacity: 0;
             transform: translateY(20px);
             transition: none;
-            white-space: nowrap;
         }
 
         /* --------------------------------------------------
@@ -602,6 +601,184 @@
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
+        }
+
+        /* ==================================================
+        [모바일 반응형] 768px 이하 화면 대응
+        ================================================== */
+        @media screen and (max-width: 768px) {
+
+            /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
+            .long-slide {
+                margin-bottom: 20vh;
+                min-height: 70vh;
+            }
+
+            .scrolling-slide,
+            .slide,
+            .medium-slide {
+                min-height: 60vh !important;
+                padding: 40px 20px;
+            }
+
+            /* 제목 폰트 축소 */
+            .article-title {
+                font-size: 1.4rem;
+                word-break: keep-all;
+                /* 한글 단어 단위 줄바꿈 */
+            }
+
+            /* 본문 인트로 폰트 축소 */
+            .scrolling-slide .intro {
+                font-size: 1rem;
+                line-height: 1.7;
+                max-width: 100%;
+            }
+
+            /* h2 폰트 축소 */
+            h2,
+            .slide h2,
+            .scrolling-slide h2,
+            .medium-slide h2 {
+                font-size: 1.15rem;
+                word-break: keep-all;
+            }
+
+            /* 이미지 최대 너비 제한 축소 */
+            .title-img-obj {
+                max-width: 90%;
+            }
+
+            .wordcloud-img-obj {
+                max-width: 85%;
+            }
+
+            .cause-img-obj {
+                max-width: 95%;
+            }
+
+            .compare-group-img-obj {
+                max-width: 95%;
+            }
+
+            .pie-chart-img-obj {
+                max-width: 95%;
+            }
+
+            .what-activity-obj {
+                max-width: 95%;
+            }
+
+            /* slide-6 텍스트 하단 여백 축소 */
+            .slide-6 .slide-content {
+                margin-bottom: 60px;
+            }
+
+            /* slide-7 패딩 축소 */
+            .slide-7 {
+                padding-top: 40px;
+            }
+
+            /* 오버레이 하이라이트 영역 높이 축소 및 정적 레이아웃 전환 */
+            .overlay-highlights {
+                height: auto;
+                min-height: 200px;
+                max-width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px 0;
+            }
+
+            /* 하이라이트 텍스트를 정적 위치로 전환 */
+            .overlay-highlight-text {
+                position: static;
+                font-size: 1rem;
+                transform: none;
+                text-align: center;
+            }
+
+            .highlight-1,
+            .highlight-2,
+            .highlight-3 {
+                top: auto;
+                left: auto;
+                transform: none;
+            }
+
+            /* 오버레이 요약 텍스트 축소 */
+            .overlay-summary h2 {
+                font-size: 1.3rem;
+            }
+
+            /* slide-8 내부 요소 위치 조정 */
+            .slide-8 h2 {
+                bottom: 20%;
+                width: 90%;
+            }
+
+            .pixel-img-obj {
+                right: 10%;
+                width: 25%;
+            }
+
+            /* slide-9 패딩 축소 */
+            .slide-9 {
+                padding-top: 40px;
+            }
+
+            /* 스크롤 선 높이 축소 */
+            .scroll-line-container {
+                height: 30vh;
+            }
+        }
+
+        /* ==================================================
+        [초소형 모바일] 480px 이하 화면 대응
+        ================================================== */
+        @media screen and (max-width: 480px) {
+
+            .long-slide {
+                margin-bottom: 30vh;
+            }
+
+            .scrolling-slide,
+            .slide {
+                padding: 30px 16px;
+            }
+
+            .article-title {
+                font-size: 1.15rem;
+            }
+
+            .scrolling-slide .intro {
+                font-size: 0.9rem;
+                line-height: 1.65;
+            }
+
+            h2,
+            .slide h2,
+            .scrolling-slide h2,
+            .medium-slide h2 {
+                font-size: 1rem;
+            }
+
+            .overlay-highlight-text {
+                font-size: 0.9rem;
+            }
+
+            .overlay-summary h2 {
+                font-size: 1.1rem;
+            }
+
+            .slide-6 .slide-content {
+                margin-bottom: 40px;
+            }
+
+            .slide-8 h2 {
+                bottom: 15%;
+            }
         }
     </style>
 </head>
