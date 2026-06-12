@@ -629,21 +629,32 @@
             position: relative;
         }
 
+        .slide-20 {
+            background-image: url('./배경/20@2x.png');
+            background-attachment: scroll;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            justify-content: flex-end;
+            position: relative;
+        }
+
         /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) PC/모바일 공통 완전 제거 */
-        .slide-1,
-        .slide-2,
-        .slide-3,
-        .slide-4,
-        .slide-8-5,
-        .slide-10-5,
-        .slide-11,
-        .slide-15,
-        .slide-16,
-        .slide-16-5,
-        .slide-17,
-        .slide-17-5,
-        .slide-18,
-        .slide-19 {
+        section.slide-1,
+        section.slide-2,
+        section.slide-3,
+        section.slide-4,
+        section.slide-8-5,
+        section.slide-10-5,
+        section.slide-11,
+        section.slide-15,
+        section.slide-16,
+        section.slide-16-5,
+        section.slide-17,
+        section.slide-17-5,
+        section.slide-18,
+        section.slide-19,
+        section.slide-20 {
             min-height: auto !important;
             height: auto !important;
             aspect-ratio: 16 / 9;
@@ -652,9 +663,9 @@
         }
 
         /* 12, 13, 14 슬라이드는 좌우 잘림을 막기 위해 img 태그를 사용하며, 비율에 맞게 자동으로 높이를 맞춤 */
-        .slide-12,
-        .slide-13,
-        .slide-14 {
+        section.slide-12,
+        section.slide-13,
+        section.slide-14 {
             min-height: auto !important;
             height: auto !important;
             padding: 0 !important;
@@ -1139,6 +1150,10 @@
     </section>
 
     <section class="slide slide-19">
+        <div class="slide-content"></div>
+    </section>
+
+    <section class="slide slide-20">
         <div class="slide-content"></div>
     </section>
 </body>
