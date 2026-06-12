@@ -9,11 +9,36 @@
     <!-- Pretendard 고품질 한국어 폰트 추가 -->
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/greensock.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/ScrollTrigger.min.js"></script>
 
     <style>
+        /* style.css 맨 윗줄에 삽입 */
+        @font-face {
+            font-family: 'EutmanGungseo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+            /* 폰트 로딩 중에도 글자가 보이도록 하여 가독성 유지 */
+        }
+
+        /* CSS 파일에서 특정 텍스트에 폰트를 먹일 때 */
+        .gungseo-title {
+            /* 뒤에 !important를 붙여서 다른 폰트 스타일을 강제로 무시하고 우선 적용합니다 */
+            font-family: 'EutmanGungseo', serif !important;
+            font-size: 5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 5px #FFC0DD;
+            /* 은은한 네온 효과 */
+        }
+
+        .gungseo-highlight {
+            font-family: 'EutmanGungseo', serif !important;
+        }
+
         /* 기본 환경 설정 */
         html {
             scroll-snap-type: y proximity;
@@ -606,6 +631,16 @@
             position: relative;
         }
 
+        .mind-obj {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            display: block;
+        }
+
         .slide-17-5 {
             /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
             min-height: 80.5vh !important;
@@ -630,6 +665,16 @@
             position: relative;
         }
 
+        .empty-obj {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            display: block;
+        }
+
         .slide-19 {
             background-image: url('./배경/19@2x.png');
             background-attachment: scroll;
@@ -638,6 +683,16 @@
             background-repeat: no-repeat;
             justify-content: flex-end;
             position: relative;
+        }
+
+        .title-obj {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            display: block;
         }
 
         .slide-20 {
@@ -824,7 +879,13 @@
             .scroll-line-container {
                 height: 30vh;
             }
+
+            .gungseo-title {
+                font-size: 7vw;
+                /* 모바일 너비에 맞게 글자 크기 자동 조절 */
+            }
         }
+
 
         /* ==================================================
         [초소형 모바일] 480px 이하 화면 대응
@@ -1200,29 +1261,42 @@
     </section>
 
     <section class="slide slide-12">
+        <h2>그들이 ‘비연애'를<br>선택했다고 해서</h2>
         <img src="./배경/12@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
             alt="slide 12">
         <div class="slide-content"></div>
     </section>
 
     <section class="slide slide-13">
+        <h2><strong>‘비사랑'</strong>을<br>선택한 것은 아닙니다</h2>
         <img src="./배경/13@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
             alt="slide 13">
         <div class="slide-content"></div>
     </section>
 
     <section class="slide slide-14">
+        <div class="slide-content">
+            <h2 class="gungseo-title">사량</h2>
+        </div>
         <img src="./배경/14@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
             alt="slide 14">
         <div class="slide-content"></div>
     </section>
 
     <section class="slide slide-15">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2>'사랑'의 어원은</h2>
+            <h2 class="gungseo-title">" 사량 "</h2>
+            <h2>에서 유래되었다고 알려져 있습니다</h2>
+        </div>
     </section>
 
     <section class="slide slide-16">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2>그리고</h2>
+            <h2 class="gungseo-title">" 사량 "</h2>
+            <h2>은 <strong>‘대상을 끊임없이 생각하고 헤아리는 마음'</strong>이라는 뜻입니다</h2>
+        </div>
     </section>
 
     <section class="medium-slide slide-16-5">
@@ -1230,7 +1304,10 @@
     </section>
 
     <section class="slide slide-17">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2>자신의 일상이 다채로워질수록,<br>연애에 대한 관심이 낮아지는 것처럼</h2>
+            <img src="./오브젝트/연애의향.png" alt="현재 본인의 삶에서 연애를 대체할 만큼 만족감을 주는 활동이 있으신가요?" class="mind-obj">
+        </div>
     </section>
 
     <section class="medium-slide slide-17-5">
@@ -1238,15 +1315,21 @@
     </section>
 
     <section class="slide slide-18">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <img src="./오브젝트/빈칸.png" alt="연애가 사라진 자리에 남은 것은 사랑의 빈칸이 아니라" class="empty-obj">
+        </div>
     </section>
 
     <section class="slide slide-19">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <img src="./오브젝트/title.png" alt="저마다의 사량이 아니었을까요?" class="title-obj">
+        </div>
     </section>
 
     <section class="slide slide-20">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2>여기까지가 우리가 읽어본<br>‘연애하지 않는 청년들’의 사량 이었습니다</h2>
+        </div>
     </section>
 </body>
 
