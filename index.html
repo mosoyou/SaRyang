@@ -216,7 +216,6 @@
 
             border-radius: 8px;
             /* 이미지 모서리를 살짝 부드럽게 깎아주는 센스 */
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             /* 위아래 본문 글자와 20px씩 간격을 두고 정중앙 정렬 */
             display: block;
@@ -232,7 +231,6 @@
         .scrolling-slide h2,
         .medium-slide h2 {
             font-size: 1.5rem;
-            margin-bottom: 20px;
             line-height: 1.6;
         }
 
@@ -245,7 +243,7 @@
         }
 
         .slide-5 {
-            background-image: url('./배경/검정-핑크@2x.png');
+            background-image: url('./배경/검정-핑크@2x.png'), linear-gradient(to bottom, #000000, #832B56);
             background-attachment: scroll;
             background-position: center;
             background-size: auto 100%;
@@ -260,7 +258,7 @@
             min-height: 80.5vh !important;
             height: 80.5vh !important;
 
-            background-image: url('./배경/연결페이지 1 (핑크)@2x.png');
+            background-image: url('./배경/연결페이지 1 (핑크)@2x.png'), linear-gradient(to bottom, #8B2B5A, #FD6B8A);
             background-attachment: scroll;
             background-position: center;
             background-size: auto 100%;
@@ -287,6 +285,10 @@
             scroll-snap-align: center;
         }
 
+        .slide-7 caption {
+            text-align: left;
+        }
+
         /* 7번 슬라이드 하단에서 올라오는 검정 배경 */
         .black-curtain-overlay {
             position: absolute;
@@ -309,10 +311,11 @@
         .overlay-highlights {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 860px;
             /* 아래 비교 그룹 이미지 너비와 일치시킵니다 */
-            height: 380px;
+            height: 480px;
             /* 이미지 높이에 맞춰 조정 가능한 영역 */
+            top: 14%;
             margin-bottom: 20px;
         }
 
@@ -336,19 +339,19 @@
         -------------------------------------------------- */
         .highlight-1 {
             top: 36%;
-            left: 31%;
+            left: 30.5%;
             transform: translate(-50%, -50%);
         }
 
         .highlight-2 {
-            top: 48%;
+            top: 47%;
             left: 31%;
             transform: translate(-50%, -50%);
         }
 
         .highlight-3 {
-            top: 55%;
-            left: 69%;
+            top: 57%;
+            left: 69.5%;
             transform: translate(-50%, -50%);
         }
 
@@ -408,7 +411,6 @@
             max-width: 400px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
         }
@@ -418,7 +420,6 @@
             max-width: 800px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
         }
@@ -428,7 +429,6 @@
             max-width: 600px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
         }
@@ -436,12 +436,14 @@
 
         /* slide-8 */
         .slide-8 {
-            background-image: url('./배경/8@2x.png');
+            background-image: url('./배경/8@2x.png'), linear-gradient(to bottom, #FA6A89, #FD808C);
             background-attachment: scroll;
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
             position: relative;
+            justify-content: flex-end !important;
+            scroll-snap-align: none !important;
         }
 
         .slide-8 .slide-content {
@@ -452,7 +454,7 @@
 
         .slide-8 h2 {
             position: absolute;
-            bottom: 30%;
+            font-size: 2rem;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -461,13 +463,11 @@
 
         .pixel-img-obj {
             position: absolute;
-            top: 20%;
-            right: 30%;
-            width: 20%;
+            bottom: 0%;
+            right: 20%;
+            width: 30%;
             max-width: 200px;
             height: auto;
-            border-radius: 0;
-            box-shadow: none;
             margin: 0;
             display: block;
         }
@@ -483,7 +483,7 @@
             background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
-            scroll-snap-align: end !important;
+            scroll-snap-align: none !important;
         }
 
         /* slide-9 */
@@ -502,10 +502,8 @@
 
         .pie-chart-img-obj {
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
         }
@@ -513,7 +511,7 @@
 
         /* slide-10 */
         .slide-10 {
-            background-image: url('./배경/10@2x.png');
+            background-image: url('./배경/10@2x.png'), linear-gradient(to bottom, #FF938E, #FC7C8B);
             background-attachment: scroll;
             background-position: center;
             background-size: auto 100%;
@@ -521,12 +519,17 @@
             position: relative;
         }
 
+        .ten-question-obj {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+        }
+
         .what-activity-obj {
             width: 100%;
             max-width: 600px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
         }
@@ -541,8 +544,8 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            align-items: flex-end;
-            scroll-snap-align: end !important;
+            align-items: center;
+            scroll-snap-align: none !important;
         }
 
 
@@ -553,8 +556,24 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        /* slide-content 자체를 공중에 띄워 그 안의 글자들을 이미지 위로 얹음 */
+        .slide-12 .slide-content,
+        .slide-13 .slide-content,
+        .slide-14 .slide-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 완전한 중앙 배치 */
+            z-index: 2;
         }
 
         .slide-12 {
@@ -563,8 +582,24 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        .slide-12 h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 0 15px #FFFFFF;
+            text-align: left;
+
+            /* ─── 위치 조절 속성 추가 ─── */
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateX(-50%);
+            /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
         }
 
         .slide-13 {
@@ -573,8 +608,24 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        .slide-13 h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 0 15px #FFFFFF;
+            text-align: left;
+
+            /* ─── 위치 조절 속성 추가 ─── */
+            position: absolute;
+            top: 50%;
+            right: 11%;
+            transform: translateX(-50%);
+            /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
         }
 
         .slide-14 {
@@ -583,8 +634,15 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        .slide-14 h2 {
+            font-size: 6rem;
+            letter-spacing: 20px;
+            color: #fff;
+            text-shadow: 0 0 15px #FFC9EC;
         }
 
         .slide-15 {
@@ -593,7 +651,7 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
         }
 
@@ -603,8 +661,16 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        .love-cause-obj {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin: 10px auto;
+            display: block;
         }
 
         .slide-16-5 {
@@ -618,7 +684,7 @@
             background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
-            scroll-snap-align: end !important;
+            scroll-snap-align: none !important;
         }
 
         .slide-17 {
@@ -627,7 +693,7 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
         }
 
@@ -635,11 +701,11 @@
             width: 100%;
             max-width: 600px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
+            z-index: 1;
         }
+
 
         .slide-17-5 {
             /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
@@ -652,8 +718,9 @@
             background-size: auto 100%;
             background-repeat: no-repeat;
             align-items: flex-end;
-            scroll-snap-align: end !important;
+            scroll-snap-align: none !important;
         }
+
 
         .slide-18 {
             background-image: url('./배경/18@2x.png');
@@ -661,7 +728,7 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
         }
 
@@ -673,6 +740,30 @@
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin: 20px auto;
             display: block;
+            z-index: 1;
+        }
+
+        /* 1. 두 슬라이드를 감싸는 부모 상자를 공중 부양 기준점으로 설정 */
+        .slide-connector-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        /* 2. 두 슬라이드를 관통하는 중앙 연결선 */
+        .vertical-line {
+            position: absolute;
+            top: 30.8%;
+            bottom: 30.1%;
+            left: 49%;
+            transform: translateX(-50%);
+            /* 정확히 가로 정중앙에 배치 */
+
+            width: 1.5px;
+            /* 선의 굵기 */
+            background-color: #FF1683;
+
+            /* 텍스트(z-index: 2)보다는 아래에, 배경 이미지(z-index: 1)보다는 위에 오도록 설정 */
+            z-index: 2;
         }
 
         .slide-19 {
@@ -681,13 +772,39 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: center;
             position: relative;
+        }
+
+        .slide-19 h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #FF1683;
+            text-align: left;
+
+            position: absolute;
+            top: -21%;
+            left: -7%;
+            transform: translateX(-50%);
+        }
+
+        .slide-19 h4 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #FF1683;
+            text-align: right;
+
+            position: absolute;
+            top: 78%;
+            right: -75%;
+            transform: translateX(-50%);
         }
 
         .title-obj {
             width: 100%;
-            max-width: 600px;
+            max-width: 400px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
@@ -701,8 +818,16 @@
             background-position: center;
             background-size: auto 100%;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: start;
             position: relative;
+        }
+
+        .slide-20 h2 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #FF1683;
+            padding-top: 200px;
+
         }
 
         /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) PC/모바일 공통 완전 제거 */
@@ -1040,7 +1165,10 @@
 
     <section class="slide-7">
         <div class="slide-content" style="z-index: 2; position: relative;">
-            <img src="./배경/비교 그룹.png" alt="20대 설문 비교그룹" class="compare-group-img-obj">
+            <img src="./오브젝트/비교 그룹.png" alt="20대 설문 비교그룹" class="compare-group-img-obj">
+            <div class="caption">*연애 의향이 ‘낮은' 그룹: (연애 하고 싶지 않은 편이다 + 연애할 생각이 전혀 없다)<br>
+                *연애 의향이 ‘높은' 그룹: (연애 하고 싶은 편이다 + 꼭 연애할 생각이다)</div>
+            <div class="caption">20세 대상 자체 설문조사 (N=143, 2026.05)</div>
         </div>
 
         <!-- 스크롤 시 화면 아래에서 올라오는 검정 배경 -->
@@ -1231,14 +1359,14 @@
         </div>
     </section>
 
-    <section class="medium-slide slide-8-5">
+    <section class="scrolling-slide slide-8-5">
         <div class="slide-content"></div>
     </section>
 
     <!-- slide-9 -->
     <section class="scrolling-slide slide-9">
         <div class="slide-content" style="z-index: 2; position: relative;">
-            <h2>그들의 사랑은 연애라는 한 형태에 머무르지 않고,</h2>
+            <h2><span style="font-size: 1.5rem;">그들의 사랑은 <strong>연애라는 한 형태에 머무르지 않고,</strong><span></span></h2>
             <img src="./오브젝트/만족감을 주는 활동.png" alt="현재 본인의 삶에서 연애를 대체할 만큼 만족감을 주는 활동이 있으신가요?" class="pie-chart-img-obj">
         </div>
     </section>
@@ -1247,11 +1375,13 @@
     <section class="scrolling-slide slide-10">
         <div class="slide-content">
             <h2>다양한 취미와 문화생활,<br>그리고 여러 관계 속에서 새롭게 표현되고 있습니다</h2>
-            <img src="./오브젝트/활동무엇.png" alt="연애를 대체할 만큼 만족감을 주는 활동이 무엇인가요?" class="what-activity-obj">
+            <img src="./오브젝트/10-question.png" alt="연애를 대체할 만큼 만족감을 주는 활동이 무엇인가요?" class="ten-question-obj">
+            <img src="./오브젝트/활동무엇.png" alt="답변" class="what-activity-obj">
+            <div class="caption">20세 대상 자체 설문조사 (N=92, 2026.05)</div>
         </div>
     </section>
 
-    <section class="medium-slide slide-10-5">
+    <section class="scrolling-slide slide-10-5">
         <div class="slide-content"></div>
     </section>
 
@@ -1261,32 +1391,33 @@
     </section>
 
     <section class="slide slide-12">
-        <h2>그들이 ‘비연애'를<br>선택했다고 해서</h2>
         <img src="./배경/12@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
             alt="slide 12">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2>그들이 ‘비연애'를<br>선택했다고 해서</h2>
+        </div>
     </section>
 
     <section class="slide slide-13">
-        <h2><strong>‘비사랑'</strong>을<br>선택한 것은 아닙니다</h2>
         <img src="./배경/13@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
             alt="slide 13">
-        <div class="slide-content"></div>
+        <div class="slide-content">
+            <h2><strong>‘비사랑'</strong>을<br>선택한 것은 아닙니다</h2>
+        </div>
     </section>
 
     <section class="slide slide-14">
+        <img src="./배경/14@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
+            alt="slide 14">
         <div class="slide-content">
             <h2 class="gungseo-title">사량</h2>
         </div>
-        <img src="./배경/14@2x.png" style="width: 100%; height: auto; display: block; margin: 0; padding: 0;"
-            alt="slide 14">
-        <div class="slide-content"></div>
     </section>
 
     <section class="scrolling-slide slide-15">
         <div class="slide-content">
             <h2>'사랑'의 어원은</h2>
-            <h2 class="gungseo-title">" 사량 "</h2>
+            <img src="./오브젝트/사량.png" alt="사량" class="love-cause-obj">
             <h2>에서 유래되었다고 알려져 있습니다</h2>
         </div>
     </section>
@@ -1294,12 +1425,12 @@
     <section class="scrolling-slide slide-16">
         <div class="slide-content">
             <h2>그리고</h2>
-            <h2 class="gungseo-title">" 사량 "</h2>
+            <img src="./오브젝트/사량.png" alt="사량" class="love-cause-obj">
             <h2>은 <strong>‘대상을 끊임없이 생각하고 헤아리는 마음'</strong>이라는 뜻입니다</h2>
         </div>
     </section>
 
-    <section class="medium-slide slide-16-5">
+    <section class="scrolling-slide slide-16-5">
         <div class="slide-content"></div>
     </section>
 
@@ -1310,25 +1441,32 @@
         </div>
     </section>
 
-    <section class="medium-slide slide-17-5">
+    <section class="scrolling-slide slide-17-5">
         <div class="slide-content"></div>
     </section>
 
-    <section class="scrolling-slide slide-18">
-        <div class="slide-content">
-            <img src="./오브젝트/빈칸.png" alt="연애가 사라진 자리에 남은 것은 사랑의 빈칸이 아니라" class="empty-obj">
-        </div>
-    </section>
+    <div class="slide-connector-wrapper">
+        <div class="vertical-line"></div>
 
-    <section class="scrolling-slide slide-19">
-        <div class="slide-content">
-            <img src="./오브젝트/title.png" alt="저마다의 사량이 아니었을까요?" class="title-obj">
-        </div>
-    </section>
+        <section class="scrolling-slide slide-18">
+            <div class="slide-content">
+                <img src="./오브젝트/빈칸.png" alt="연애가 사라진 자리에 남은 것은 사랑의 빈칸이 아니라" class="empty-obj">
+            </div>
+        </section>
+
+        <section class="scrolling-slide slide-19">
+            <div class="slide-content">
+                <h3>저마다의</h3>
+                <img src="./오브젝트/title.png" alt="저마다의 사량이 아니었을까요?" class="title-obj">
+                <h4>이 아니었을까요?</h4>
+            </div>
+        </section>
+
+    </div>
 
     <section class="scrolling-slide slide-20">
         <div class="slide-content">
-            <h2>여기까지가 우리가 읽어본<br>‘연애하지 않는 청년들’의 사량 이었습니다</h2>
+            <h2>여기까지가 우리가 읽어본<br>‘연애하지 않는 청년들’의 <strong>사량</strong> 이었습니다</h2>
         </div>
     </section>
 </body>
