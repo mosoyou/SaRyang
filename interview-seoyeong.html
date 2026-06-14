@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>'사량'인터뷰-서영</title>
 
+    <!-- Pretendard 폰트 추가 -->
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/greensock.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/ScrollTrigger.min.js"></script>
+
 
     <style>
         /* 기본 환경 설정 */
@@ -31,8 +33,9 @@
 
         .long-slide {
             width: 100%;
-            height: 100dvh; /* vh를 dvh로 변경 */
+            height: 100vh;
             margin-bottom: 80vh;
+            /* 추가: 다음 문장까지의 스크롤 간격을 대폭 늘려 스크롤을 더 해야 넘어가도록 함 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,102 +46,68 @@
 
         .scrolling-slide {
             width: 100%;
-            min-height: 100dvh; /* vh를 dvh로 변경 */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             box-sizing: border-box;
-            padding: 40px 20px; /* 패딩 최적화 */
-            position: relative; /* 추가 */
-            scroll-snap-align: center;
+            padding: 80px 40px;
+            background-attachment: scroll;
         }
 
-        /* 공통 배경 이미지 스타일 설정 (비율 유지) */
-        .slide-1, .slide-2, .slide-3 {
+        .slide-1 {
+            background-image: url('./인터뷰페이지/서영/1.png');
             background-attachment: scroll;
-            background-position: center center;
-            background-size: contain;
+            background-position: center;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
-        .slide-1 { background-image: url('./인터뷰페이지/서영/1.png'); }
-        .slide-2 { background-image: url('./인터뷰페이지/서영/2.png'); }
-        .slide-3 { background-image: url('./인터뷰페이지/서영/3.png'); }
-
-        /* 텍스트 레이어 디자인 및 반응형 설정 */
-        .slide-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -30%);
-            z-index: 10;
-            width: 85%;
-            max-width: 600px;
-            text-align: center;
-            box-sizing: border-box;
-            opacity: 0;
-            visibility: hidden;
+        .slide-2 {
+            background-image: url('./인터뷰페이지/서영/2.png');
+            background-attachment: scroll;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
         }
 
-        /* 화면 크기에 맞춰 글자 크기가 자동으로 조절되는 clamp 속성 */
-        .slide-content h2 {
-            font-size: clamp(1.8rem, 5vw, 2.8rem); /* 최소 1.8rem ~ 최대 2.8rem 사이에서 유연하게 조절 */
-            margin-bottom: 20px;
-            word-break: keep-all; /* 문맥에 맞게 줄바꿈 */
+        .slide-3 {
+            background-image: url('./인터뷰페이지/서영/3.png');
+            background-attachment: scroll;
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
         }
 
-        .slide-content p {
-            font-size: clamp(1rem, 3.5vw, 1.4rem); /* 최소 1rem ~ 최대 1.4rem 사이에서 유연하게 조절 */
-            line-height: 1.6;
-            color: #e0e0e0;
-            word-break: keep-all;
-            margin: 0;
+        /* [모바일 반응형] 768px 이하 화면 대응 */
+        @media screen and (max-width: 768px) {
+
+            /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
+            .long-slide {
+                margin-bottom: 20vh;
+                min-height: 70vh;
+            }
+
+            .scrolling-slide,
+            .medium-slide {
+                min-height: 60vh !important;
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-
-    <section class="long-slide slide-1"></section>
-
-    <section class="scrolling-slide slide-2">
-        <div class="slide-content">
-            <h2>사랑은 늘 좋은 감정만을 의미하지는 않는다고 생각합니다.<br>때로는 실망을 남기고, 기대가 무너지는 순간을 데려오기도 합니다.<br>그럼에도 우리는 다시 누군가를 믿고, 무언가를 좋아하고, 어떤 내일을 기대합니다.</h2>
-            <h2><strong>저는 사랑이 그 지점에서 시작된다고 생각합니다.<br>떠날 이유보다 남을 이유를, 포기할 이유보다 계속할 이유를 찾아가는 것.</strong></h2>
-            <h2><br>계속할 이유를 찾게 되는 이유는 저마다 다를 것입니다.</h2>
-            <h2>어떤 날에는 곁을 지켜준 사람일 수도 있고,<br>어떤 날에는 오래도록 좋아해 온 취미나 꿈, 음악, 혹은 나 자신일 수도 있습니다.</h2>
-            <h2><br>형태와 대상은 달라도, 사랑은 언제나 우리를 다시 삶 쪽으로 향하게 만듭니다.</h2>
-        </div>
-    </section>
-
-    <section class="scrolling-slide slide-3">
-        <div class="slide-content">
-            <h2>세 번째 슬라이드 인터뷰 질문</h2>
-            <p>마지막 인터뷰 내용이 들어가는 자리입니다. 글자가 배경 이미지와 분리되어 가독성이 훨씬 좋아집니다.</p>
-        </div>
-    </section>
-
     <script>
         // ScrollTrigger 플러그인 등록
         gsap.registerPlugin(ScrollTrigger);
-
-        // 모든 슬라이드 콘텐츠를 찾아 스크롤 애니메이션 적용
-        gsap.utils.toArray('.slide-content').forEach((content) => {
-            gsap.to(content, {
-                opacity: 1,         // 선명하게 만들기
-                y: 0,               // 원래 위치로 올리기
-                duration: 1.2,      // 애니메이션이 지속되는 시간 (초)
-                ease: "power2.out", // 부드러운 가속도 효과
-                scrollTrigger: {
-                    trigger: content,      // 애니메이션 작동 기준이 되는 요소
-                    start: "top 85%",      // 글자 상단이 화면 아래에서 85% 지점에 도달했을 때 시작
-                    toggleActions: "play none none reverse" // 모바일 터치 스크롤에 최적화된 작동 방식
-                }
-            });
-        });
     </script>
+
+    <section class="long-slide slide-1"></section>
+    <section class="scrolling-slide slide-2"></section>
+    <section class="scrolling-slide slide-3"></section>
 </body>
 
 </html>
