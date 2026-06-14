@@ -61,7 +61,7 @@
             background-image: url('./인터뷰페이지/서연/1.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
             /* 핀이 끝나면 곧바로 다음 슬라이드로 (long-slide 기본 여백 제거), 핀-스냅 충돌 방지 */
             margin-bottom: 0;
@@ -72,7 +72,7 @@
             background-image: url('./인터뷰페이지/서연/2.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
@@ -80,7 +80,7 @@
             background-image: url('./인터뷰페이지/서연/3.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
@@ -88,19 +88,20 @@
            배경(auto 100%, 중앙) 기하에 맞춘 좌표라 해상도와 무관하게 박스에 정렬됨 */
         .love-cover {
             position: absolute;
-            left: calc(50% + 34.24vh);
-            top: 52.41%;
+            /* contain 기하(이미지가 화면에 완전히 들어오고 중앙 정렬)에 맞춘 박스 좌표 */
+            left: calc(50% + min(19.26vw, 34.24vh));
+            top: calc(50% + min(1.356vw, 2.41vh));
             transform: translate(-50%, -50%);
-            width: 34vh;
-            height: 8.9vh;
+            width: min(19.1vw, 34vh);
+            height: min(5vw, 8.9vh);
             background: #000;
             z-index: 2;
         }
 
         .love-word {
             position: absolute;
-            left: calc(50% + 34.24vh);
-            top: 52.41%;
+            left: calc(50% + min(19.26vw, 34.24vh));
+            top: calc(50% + min(1.356vw, 2.41vh));
             transform: translate(-50%, -50%);
             z-index: 3;
             color: #fff;
@@ -138,7 +139,7 @@
     <section class="long-slide slide-1">
         <!-- 구워진 단어를 덮는 검정 박스 + 다시 그린 단어(페이드 인) -->
         <div class="love-cover"></div>
-        <div class="love-word" style="font-size: 6vh;">물음표</div>
+        <div class="love-word" style="font-size: min(3.375vw, 6vh);">물음표</div>
     </section>
     <section class="scrolling-slide slide-2"></section>
     <section class="scrolling-slide slide-3"></section>
