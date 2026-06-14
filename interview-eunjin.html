@@ -61,7 +61,7 @@
             background-image: url('./인터뷰페이지/은진/1.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
             /* 핀이 끝나면 곧바로 다음 슬라이드로 (long-slide 기본 여백 제거), 핀-스냅 충돌 방지 */
             margin-bottom: 0;
@@ -72,7 +72,7 @@
             background-image: url('./인터뷰페이지/은진/2.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
@@ -80,26 +80,27 @@
             background-image: url('./인터뷰페이지/은진/3.png');
             background-attachment: scroll;
             background-position: center;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
         /* Love ???% 박스: 구워진 단어를 검정으로 덮고, 단어를 다시 그려 페이드 인 */
         .love-cover {
             position: absolute;
-            left: calc(50% + 34.24vh);
-            top: 52.41%;
+            /* contain 기하(이미지가 화면에 완전히 들어오고 중앙 정렬)에 맞춘 박스 좌표 */
+            left: calc(50% + min(19.26vw, 34.24vh));
+            top: calc(50% + min(1.356vw, 2.41vh));
             transform: translate(-50%, -50%);
-            width: 34vh;
-            height: 8.9vh;
+            width: min(19.1vw, 34vh);
+            height: min(5vw, 8.9vh);
             background: #000;
             z-index: 2;
         }
 
         .love-word {
             position: absolute;
-            left: calc(50% + 34.24vh);
-            top: 52.41%;
+            left: calc(50% + min(19.26vw, 34.24vh));
+            top: calc(50% + min(1.356vw, 2.41vh));
             transform: translate(-50%, -50%);
             z-index: 3;
             color: #fff;
@@ -136,7 +137,7 @@
 
     <section class="long-slide slide-1">
         <div class="love-cover"></div>
-        <div class="love-word" style="font-size: 7vh;">숨</div>
+        <div class="love-word" style="font-size: min(3.9375vw, 7vh);">숨</div>
     </section>
     <section class="scrolling-slide slide-2"></section>
     <section class="scrolling-slide slide-3"></section>
