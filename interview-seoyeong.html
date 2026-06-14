@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>'사량'인터뷰-서영</title>
 
-    <!-- Pretendard 폰트 추가 -->
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/greensock.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/ScrollTrigger.min.js"></script>
-
 
     <style>
         /* 기본 환경 설정 */
@@ -33,9 +31,8 @@
 
         .long-slide {
             width: 100%;
-            height: 100vh;
+            height: 100dvh; /* 모바일 주소창 대응을 위해 dvh로 변경 */
             margin-bottom: 80vh;
-            /* 추가: 다음 문장까지의 스크롤 간격을 대폭 늘려 스크롤을 더 해야 넘어가도록 함 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,55 +43,35 @@
 
         .scrolling-slide {
             width: 100%;
-            min-height: 100vh;
+            min-height: 100dvh; /* 모바일 주소창 대응을 위해 dvh로 변경 */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             box-sizing: border-box;
-            padding: 80px 40px;
+            padding: 40px 20px; /* 모바일 여백 최적화 */
+            scroll-snap-align: center;
+        }
+
+        /* 공통 배경 이미지 스타일 설정 */
+        .slide-1, .slide-2, .slide-3 {
             background-attachment: scroll;
+            background-position: center center;
+            background-size: contain; /* 이미지가 잘리지 않고 비율을 유지하도록 contain으로 변경 */
+            background-repeat: no-repeat;
         }
 
         .slide-1 {
             background-image: url('./인터뷰페이지/서영/1.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
         }
 
         .slide-2 {
             background-image: url('./인터뷰페이지/서영/2.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
         }
 
         .slide-3 {
             background-image: url('./인터뷰페이지/서영/3.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
-
-        /* [모바일 반응형] 768px 이하 화면 대응 */
-        @media screen and (max-width: 768px) {
-
-            /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
-            .long-slide {
-                margin-bottom: 20vh;
-                min-height: 70vh;
-            }
-
-            .scrolling-slide,
-            .medium-slide {
-                min-height: 60vh !important;
-                padding: 40px 20px;
-            }
         }
     </style>
 </head>
