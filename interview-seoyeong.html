@@ -80,6 +80,22 @@
             background-size: auto 100%;
             background-repeat: no-repeat;
         }
+
+        /* [모바일 반응형] 768px 이하 화면 대응 */
+        @media screen and (max-width: 768px) {
+
+            /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
+            .long-slide {
+                margin-bottom: 20vh;
+                min-height: 70vh;
+            }
+
+            .scrolling-slide,
+            .medium-slide {
+                min-height: 60vh !important;
+                padding: 40px 20px;
+            }
+        }
     </style>
 </head>
 
