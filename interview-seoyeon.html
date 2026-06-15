@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>'사량'인터뷰-서연</title>
 
-    <!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KS9TWBZD');</script>
-
     <!-- Pretendard 폰트 추가 -->
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
@@ -52,6 +42,14 @@
             text-align: center;
             position: relative;
             scroll-snap-align: center;
+        }
+
+        .medium-slide {
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            position: relative;
+            background-attachment: scroll;
         }
 
         .scrolling-slide {
@@ -151,6 +149,7 @@
         <div class="love-cover"></div>
         <div class="love-word" style="font-size: min(3.375vw, 6vh);">물음표</div>
     </section>
+    <section class="medium-slide"></section>
     <section class="scrolling-slide slide-2"></section>
     <section class="scrolling-slide slide-3"></section>
 
