@@ -1,1291 +1,1293 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta name="google-site-verification" content="3gfs48NrDbdf_tIOWEFezyisWH2XArGt-fZzkLKd6DI" />
+<head></head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"사량": 데이터로 읽는 '연애하지 않는 청년들'의 이야기</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"사량": 데이터로 읽는 '연애하지 않는 청년들'의 이야기</title>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS9TWBZD');</script>
+<!-- End Google Tag Manager -->
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KS9TWBZD');</script>
-    <!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="3gfs48NrDbdf_tIOWEFezyisWH2XArGt-fZzkLKd6DI" />
 
-    <!-- Pretendard 고품질 한국어 폰트 추가 -->
-    <link rel="stylesheet" as="style" crossorigin
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.css">
+<!-- Pretendard 고품질 한국어 폰트 추가 -->
+<link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/greensock.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/greensock.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/greensock/3.12.2/ScrollTrigger.min.js"></script>
 
-    <style>
-        /* style.css 맨 윗줄에 삽입 */
-        @font-face {
-            font-family: 'EutmanGungseo';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.woff2') format('woff2');
-            font-weight: normal;
-            font-display: swap;
-            /* 폰트 로딩 중에도 글자가 보이도록 하여 가독성 유지 */
-        }
+<style>
+    /* style.css 맨 윗줄에 삽입 */
+    @font-face {
+        font-family: 'EutmanGungseo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKGUNG.woff2') format('woff2');
+        font-weight: normal;
+        font-display: swap;
+        /* 폰트 로딩 중에도 글자가 보이도록 하여 가독성 유지 */
+    }
 
-        /* CSS 파일에서 특정 텍스트에 폰트를 먹일 때 */
-        .gungseo-title {
-            /* 뒤에 !important를 붙여서 다른 폰트 스타일을 강제로 무시하고 우선 적용합니다 */
-            font-family: 'EutmanGungseo', serif !important;
-            font-size: 5rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 5px #FFC0DD;
-            /* 은은한 네온 효과 */
-        }
+    /* CSS 파일에서 특정 텍스트에 폰트를 먹일 때 */
+    .gungseo-title {
+        /* 뒤에 !important를 붙여서 다른 폰트 스타일을 강제로 무시하고 우선 적용합니다 */
+        font-family: 'EutmanGungseo', serif !important;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 0 5px #FFC0DD;
+        /* 은은한 네온 효과 */
+    }
 
-        .gungseo-highlight {
-            font-family: 'EutmanGungseo', serif !important;
-        }
+    .gungseo-highlight {
+        font-family: 'EutmanGungseo', serif !important;
+    }
 
-        /* 기본 환경 설정 */
-        html {
-            scroll-snap-type: y proximity;
-            scroll-behavior: smooth;
-        }
+    /* 기본 환경 설정 */
+    html {
+        scroll-snap-type: y proximity;
+        scroll-behavior: smooth;
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', sans-serif;
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Pretendard', sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
 
-        /* ==================================================
+    /* ==================================================
         [파트 1] 
         ================================================== */
-        /* 1. 슬라이드 한 칸이 모니터 화면 전체를 차지하도록 설정 */
-        .long-slide {
-            width: 100%;
-            height: 100vh;
-            margin-bottom: 80vh;
-            /* 추가: 다음 문장까지의 스크롤 간격을 대폭 늘려 스크롤을 더 해야 넘어가도록 함 */
-            display: flex;
-            justify-content: center;
-            /* 가로 정중앙 */
-            align-items: center;
-            /* 세로 정중앙 */
-            text-align: center;
-            /* 글자 자체도 가운데 정렬 */
-            position: relative;
-            scroll-snap-align: center;
-            /* start에서 center로 변경하여 정확히 화면 중앙에 스냅 */
-        }
+    /* 1. 슬라이드 한 칸이 모니터 화면 전체를 차지하도록 설정 */
+    .long-slide {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 80vh;
+        /* 추가: 다음 문장까지의 스크롤 간격을 대폭 늘려 스크롤을 더 해야 넘어가도록 함 */
+        display: flex;
+        justify-content: center;
+        /* 가로 정중앙 */
+        align-items: center;
+        /* 세로 정중앙 */
+        text-align: center;
+        /* 글자 자체도 가운데 정렬 */
+        position: relative;
+        scroll-snap-align: center;
+        /* start에서 center로 변경하여 정확히 화면 중앙에 스냅 */
+    }
 
-        /* 올라오는 슬라이드들의 공통 속성 */
-        .scrolling-slide {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 80px 40px;
-            scroll-snap-align: center;
-            /* start에서 center로 변경하여 정확히 화면 중앙에 스냅 */
-            background-attachment: scroll;
-        }
+    /* 올라오는 슬라이드들의 공통 속성 */
+    .scrolling-slide {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 80px 40px;
+        scroll-snap-align: center;
+        /* start에서 center로 변경하여 정확히 화면 중앙에 스냅 */
+        background-attachment: scroll;
+    }
 
-        .medium-slide {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            /* 가로 정중앙 */
-            align-items: center;
-            /* 세로 정중앙 */
-            text-align: center;
-            /* 글자 자체도 가운데 정렬 */
-            position: relative;
-            background-attachment: scroll;
-        }
+    .medium-slide {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        /* 가로 정중앙 */
+        align-items: center;
+        /* 세로 정중앙 */
+        text-align: center;
+        /* 글자 자체도 가운데 정렬 */
+        position: relative;
+        background-attachment: scroll;
+    }
 
-        .slide {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 80px 40px;
-            background-attachment: scroll;
-        }
+    .slide {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 80px 40px;
+        background-attachment: scroll;
+    }
 
 
-        /* 2. 제목과 부제목을 담은 상자 (두 텍스트 사이의 간격 조절) */
-        .slide-content {
-            display: flex;
-            flex-direction: column;
-            /* 위에서 아래로 차곡차곡 쌓이게 설정 */
-            gap: 15px;
-            /* 제목과 부제목 사이의 세로 공백 간격 */
-            will-change: transform, opacity;
-        }
+    /* 2. 제목과 부제목을 담은 상자 (두 텍스트 사이의 간격 조절) */
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        /* 위에서 아래로 차곡차곡 쌓이게 설정 */
+        gap: 15px;
+        /* 제목과 부제목 사이의 세로 공백 간격 */
+        will-change: transform, opacity;
+    }
 
-        /* 3. 제목 스타일 */
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 15px #FFC0DD;
-            /* 은은한 네온 효과 */
-        }
+    /* 3. 제목 스타일 */
+    .article-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 0 15px #FFC0DD;
+        /* 은은한 네온 효과 */
+    }
 
-        /* 4. 부제목 스타일 */
-        .article-desc {
-            text-align: right;
-            font-size: 1rem;
-            color: #A0A0A0;
-        }
+    /* 4. 부제목 스타일 */
+    .article-desc {
+        text-align: right;
+        font-size: 1rem;
+        color: #A0A0A0;
+    }
 
-        /* 도입부: 검정 배경 한 슬라이드를 고정(pin)하고 4개 헤드라인을 차례로 표시 */
-        .headlines {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-color: #000;
-            overflow: hidden;
-        }
+    /* 도입부: 검정 배경 한 슬라이드를 고정(pin)하고 4개 헤드라인을 차례로 표시 */
+    .headlines {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        overflow: hidden;
+    }
 
-        /* 각 헤드라인: 같은 자리(중앙)에 겹쳐두고 순차로 페이드 인/아웃.
+    /* 각 헤드라인: 같은 자리(중앙)에 겹쳐두고 순차로 페이드 인/아웃.
            가로 중앙은 left/right:0 + margin auto (transform 미사용 → GSAP y와 충돌 없음) */
-        .headlines .hl {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 100%;
-            margin: 0 auto;
-            max-width: 1100px;
-            padding: 0 40px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 15px;
-            text-align: center;
-        }
+    .headlines .hl {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1100px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+    }
 
-        .scrolling-slide .intro {
-            font-size: 1.3rem;
-            max-width: 800px;
-            line-height: 1.8;
-            font-weight: 300;
-        }
+    .scrolling-slide .intro {
+        font-size: 1.3rem;
+        max-width: 800px;
+        line-height: 1.8;
+        font-weight: 300;
+    }
 
-        /* 자바스크립트가 실행되기 전, 글자의 초기 상태를 투명하게 세팅합니다 */
-        .reveal-text {
-            opacity: 0;
-            transform: translateY(30px);
-        }
+    /* 자바스크립트가 실행되기 전, 글자의 초기 상태를 투명하게 세팅합니다 */
+    .reveal-text {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
-        /* slide-12, 13처럼 위치가 지정된 h2 안에서 상하 등장 효과를 주기 위한 래퍼 */
-        .reveal-block {
-            display: block;
-        }
+    /* slide-12, 13처럼 위치가 지정된 h2 안에서 상하 등장 효과를 주기 위한 래퍼 */
+    .reveal-block {
+        display: block;
+    }
 
-        /* 배경은 투명하게 설정하여 고정된 검정 배경이 보이도록 함 */
-        .slide-1 {
-            background-color: transparent;
-        }
+    /* 배경은 투명하게 설정하여 고정된 검정 배경이 보이도록 함 */
+    .slide-1 {
+        background-color: transparent;
+    }
 
-        /* ==================================================
+    /* ==================================================
         [파트 2] 
         ================================================== */
 
-        .slide-1 {
-            /* 1. 원하는 이미지 주소를 url 안에 넣습니다 */
-            background-image: url('./배경/1@2x.png');
-            /* 2. 고정하지 않고 글자와 함께 위로 올라가도록 스크롤 설정 */
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
+    .slide-1 {
+        /* 1. 원하는 이미지 주소를 url 안에 넣습니다 */
+        background-image: url('./배경/1@2x.png');
+        /* 2. 고정하지 않고 글자와 함께 위로 올라가도록 스크롤 설정 */
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
 
-        .slide-2 {
-            background-image: url('./배경/2@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
+    .slide-2 {
+        background-image: url('./배경/2@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
 
-        .slide-2-5 {
-            background-color: #000000;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 80px;
-            position: relative;
-        }
+    .slide-2-5 {
+        background-color: #000000;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 80px;
+        position: relative;
+    }
 
-        .slide-3 {
-            background-image: url('./배경/횡단보도@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
+    .slide-3 {
+        background-image: url('./배경/횡단보도@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
 
-        .slide-4 {
-            background-image: url('./배경/횡단보도 다음@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-        }
+    .slide-4 {
+        background-image: url('./배경/횡단보도 다음@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
 
-        .title-img-obj {
-            width: 100%;
-            /* 부모 상자 너비에 맞춰 유연하게 조절 */
-            max-width: 600px;
-            /* 화면이 아무리 커져도 이미지가 최대 600px까지만 커지도록 제한 */
-            height: auto;
-            /* 가로 비율에 맞춰 세로 높이는 자동으로 계산 (비율 유지) */
+    .title-img-obj {
+        width: 100%;
+        /* 부모 상자 너비에 맞춰 유연하게 조절 */
+        max-width: 600px;
+        /* 화면이 아무리 커져도 이미지가 최대 600px까지만 커지도록 제한 */
+        height: auto;
+        /* 가로 비율에 맞춰 세로 높이는 자동으로 계산 (비율 유지) */
 
-            border-radius: 8px;
-            /* 이미지 모서리를 살짝 부드럽게 깎아주는 센스 */
-            margin: 20px auto;
-            /* 위아래 본문 글자와 20px씩 간격을 두고 정중앙 정렬 */
-            display: block;
-            /* 이미지를 독립된 블록 객체로 지정 */
-        }
+        border-radius: 8px;
+        /* 이미지 모서리를 살짝 부드럽게 깎아주는 센스 */
+        margin: 20px auto;
+        /* 위아래 본문 글자와 20px씩 간격을 두고 정중앙 정렬 */
+        display: block;
+        /* 이미지를 독립된 블록 객체로 지정 */
+    }
 
-        /* ==================================================
+    /* ==================================================
         [파트 3] 
         ================================================== */
+
+    h2,
+    .slide h2,
+    .scrolling-slide h2,
+    .medium-slide h2 {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .caption {
+        text-align: right;
+        font-size: 0.7rem;
+        color: #fff;
+        opacity: 57%;
+        font-weight: 300;
+    }
+
+    .slide-5 {
+        background-image: url('./배경/검정-핑크@2x.png'), linear-gradient(to bottom, #000000, #832B56);
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: flex-end;
+        position: relative;
+        /* 자식인 선을 절대 위치시키기 위해 */
+    }
+
+    .slide-6 {
+        /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+        min-height: 80.5vh !important;
+        height: 80.5vh !important;
+
+        background-image: url('./배경/연결페이지 1 (핑크)@2x.png'), linear-gradient(to bottom, #8B2B5A, #FD6B8A);
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+        scroll-snap-align: end !important;
+    }
+
+    .slide-6 .slide-content {
+        margin-bottom: 150px;
+        /* 80px만큼 바닥에서 띄우기 (원하는 만큼 조절 가능) */
+    }
+
+    .slide-7 {
+        background-color: #fa6a89;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+        scroll-snap-align: center;
+    }
+
+    .slide-7 caption {
+        text-align: left;
+    }
+
+    /* 7번 슬라이드 하단에서 올라오는 검정 배경 */
+    .black-curtain-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 10;
+        transform: translateY(100%);
+        /* 처음엔 화면 아래에 숨김 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 비교그룹 이미지 래퍼 — 글로우 라벨의 위치 기준(컨테이너). 폰트도 이 너비에 비례(cqw) */
+    .compare-group-wrap {
+        position: relative;
+        /* 확정 너비. 데스크톱 600px, 좁으면 화면에 맞춤(이미지=래퍼 너비) */
+        width: min(600px, 92vw);
+        margin: 20px auto;
+        /* 주의: container-type/contain/transform 등은 stacking context를 만들어
+               라벨이 검정 커튼 아래로 갇히므로 사용하지 않음 */
+    }
+
+    /* 커튼 뒤 이미지 글자에 정확히 포개지는 글로우 라벨 */
+    .overlay-highlight-text {
+        position: absolute;
+        /* 좌표점을 글자 중앙에 맞추기 위한 중앙 보정 */
+        transform: translate(-50%, -50%);
+        /* 이미지 너비(=min(600px,92vw))에 맞춰 글자 크기도 비례 → 모든 해상도에서 베이크 글자와 일치.
+               이미지 600px일 때 18.18px로 고정, 그보다 좁으면 화면 너비에 비례(2.79vw) */
+        font-size: min(18.18px, 2.79vw);
+        font-weight: 700;
+        white-space: nowrap;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+        /* 하이라이트 발광 효과 */
+        opacity: 0;
+        /* 검정 커튼(z-index:10)보다 위에 보이도록 */
+        z-index: 12;
+        pointer-events: none;
+    }
+
+    /* --------------------------------------------------
+           [세부 조정 영역] 각 라벨의 위치 = 이미지 속 해당 글자의 중심점
+           (이미지 픽셀 분석으로 산출한 % 값, 단위 %)
+        -------------------------------------------------- */
+    .highlight-1 {
+        /* 개인주의와 혼자 중심 삶 선호 (Low 1행) */
+        left: 22.38%;
+        top: 56.4%;
+    }
+
+    .highlight-2 {
+        /* 연애 피로감 · 감정소모 우려 (Low 2행) */
+        left: 22.34%;
+        top: 67.22%;
+    }
+
+    .highlight-3 {
+        /* 경제적 · 현실적 부담 (High 3행) */
+        left: 77.66%;
+        top: 78.15%;
+    }
+
+    /* 오버레이 하단 요약 텍스트 */
+    /* 요약문: 화면 중앙 하단(하이라이트 텍스트 아래)에 고정 배치.
+           좌우 중앙은 left/right:0 + text-align으로 처리 → GSAP의 y(translateY)와 충돌 없음 */
+    .overlay-summary {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 70%;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    .overlay-summary h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1.6;
+        color: #fff;
+    }
+
+    /* 5번과 6번을 연결하는 스크롤 선 */
+    .scroll-line-container {
+        position: absolute;
+        top: calc(100% - 40px);
+        /* 5번 슬라이드의 텍스트 아래에서 시작 */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 50vh;
+        /* 6번 슬라이드 안으로 35vh만큼 뻗어나감 */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* 은은한 기본 선 */
+        z-index: 20;
+    }
+
+    .scroll-line-fill {
+        width: 100%;
+        height: 0%;
+        background-color: #fff;
+        /* 스크롤에 따라 하얗게 채워질 선 */
+    }
+
+    .scroll-line-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 0%;
+        /* 처음에는 위쪽에 위치 */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 선의 중앙에 정확히 정렬 */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        /* 약간의 빛나는 효과 */
+    }
+
+    .wordcloud-img-obj {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .cause-img-obj {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .compare-group-img-obj {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        /* 여백은 래퍼(.compare-group-wrap)가 담당 → 이미지는 래퍼를 꽉 채움 */
+        margin: 0;
+        display: block;
+    }
+
+
+    /* slide-8 */
+    .slide-8 {
+        background-image: url('./배경/8@2x.png'), linear-gradient(to bottom, #FA6A89, #FD808C);
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        justify-content: flex-end !important;
+        scroll-snap-align: none !important;
+    }
+
+    .slide-8 .slide-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide-8 h2 {
+        position: absolute;
+        font-size: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin: 0;
+    }
+
+    .pixel-img-obj {
+        position: absolute;
+        bottom: 0%;
+        right: 20%;
+        width: 30%;
+        max-width: 200px;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+    .slide-8-5 {
+        /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+        min-height: 80.5vh !important;
+        height: 80.5vh !important;
+
+        background-image: url('./배경/8.5@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+        scroll-snap-align: none !important;
+    }
+
+    /* slide-9 */
+    .slide-9 {
+        background-color: #FF938E;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+        position: relative;
+        overflow: hidden;
+        scroll-snap-align: center;
+    }
+
+    .slide-9 h2 {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .pie-chart-img-obj {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+
+    /* slide-10 */
+    .slide-10 {
+        background-image: url('./배경/10@2x.png'), linear-gradient(to bottom, #FF938E, #FC7C8B);
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ten-question-obj {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin-left: 20%;
+    }
+
+    .what-activity-obj {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-bottom: 20px auto;
+        display: block;
+    }
+
+    .slide-10-5 {
+        /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+        min-height: 80.5vh !important;
+        height: 80.5vh !important;
+
+        background-image: url('./배경/10.5@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        align-items: center;
+        scroll-snap-align: none !important;
+    }
+
+
+    /* slide-11 */
+    .slide-11 {
+        background-image: url('./배경/175@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* slide-content 자체를 공중에 띄워 그 안의 글자들을 이미지 위로 얹음 */
+    .slide-12 .slide-content,
+    .slide-13 .slide-content,
+    .slide-14 .slide-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 완전한 중앙 배치 */
+        z-index: 2;
+    }
+
+    .slide-12 {
+        background-image: url('./배경/12@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slide-12 h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 0 0 15px #FFFFFF;
+        text-align: left;
+
+        /* ─── 위치 조절 속성 추가 ─── */
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateX(-50%);
+        /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
+    }
+
+    .slide-13 {
+        background-image: url('./배경/13@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slide-13 h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 0 0 15px #FFFFFF;
+        text-align: left;
+
+        /* ─── 위치 조절 속성 추가 ─── */
+        position: absolute;
+        top: 50%;
+        right: 11%;
+        transform: translateX(-50%);
+        /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
+    }
+
+    .slide-14 {
+        background-image: url('./배경/14@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slide-14 h2 {
+        font-size: 6rem;
+        letter-spacing: 20px;
+        color: #fff;
+        text-shadow: 0 0 15px #FFC9EC;
+    }
+
+    /* slide 15→16: '사량'을 고정한 채 배경·위아래 텍스트만 전환하는 핀 무대 (섹션 자체를 pin) */
+    .saryang-stage {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sp-bg {
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+
+    .sp-bg-15 {
+        background-image: url('./배경/15@2x.png'), linear-gradient(to bottom, #000000, #95315F);
+    }
+
+    .sp-bg-16 {
+        background-image: url('./배경/16@2x.png'), linear-gradient(to bottom, #95315F, #EE6384);
+        opacity: 0;
+    }
+
+    .sp-col {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    /* 위/아래 텍스트 슬롯: 15·16 문구를 같은 칸에 겹쳐두고 전환 (사량은 고정) */
+    .sp-slot {
+        display: grid;
+    }
+
+    .sp-slot>h2 {
+        grid-area: 1 / 1;
+        margin: 0;
+    }
+
+    .sp-slot .sp-16 {
+        opacity: 0;
+    }
+
+    .sp-saryang {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        display: block;
+    }
+
+    .slide-16-5 {
+        /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+        min-height: 80.5vh !important;
+        height: 80.5vh !important;
+
+        background-image: url('./배경/16.5@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+        scroll-snap-align: none !important;
+    }
+
+    .slide-17 {
+        background-image: url('./배경/17@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .mind-obj {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        z-index: 1;
+    }
+
+
+    .slide-17-5 {
+        /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
+        min-height: 80.5vh !important;
+        height: 80.5vh !important;
+
+        background-image: url('./배경/17.5@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        align-items: flex-end;
+        scroll-snap-align: none !important;
+    }
+
+
+    .slide-18 {
+        background-image: url('./배경/18@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .empty-obj {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        margin: 20px auto;
+        display: block;
+        z-index: 1;
+    }
+
+    /* 1. 두 슬라이드를 감싸는 부모 상자를 공중 부양 기준점으로 설정 */
+    .slide-connector-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    /* 2. 두 슬라이드를 관통하는 중앙 연결선 */
+    .vertical-line {
+        position: absolute;
+        top: 30.8%;
+        bottom: 30.1%;
+        left: 49%;
+        transform: translateX(-50%);
+        /* 정확히 가로 정중앙에 배치 */
+
+        width: 1.5px;
+        /* 선의 굵기 */
+        background-color: #FF1683;
+
+        /* 텍스트(z-index: 2)보다는 아래에, 배경 이미지(z-index: 1)보다는 위에 오도록 설정 */
+        z-index: 2;
+    }
+
+    .slide-19 {
+        background-image: url('./배경/19@2x.png');
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slide-19 h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #FF1683;
+        text-align: left;
+
+        position: absolute;
+        top: -21%;
+        left: -7%;
+        transform: translateX(-50%);
+    }
+
+    .slide-19 h4 {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #FF1683;
+        text-align: right;
+
+        position: absolute;
+        top: 78%;
+        right: -75%;
+        transform: translateX(-50%);
+    }
+
+    .title-obj {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        margin: 20px auto;
+        display: block;
+    }
+
+    .slide-20 {
+        background-color: #F9F2EE;
+        background-attachment: scroll;
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slide-20 h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #FF1683;
+    }
+
+    /* slide-21: 다섯 팀원 인터뷰로 이어지는 '사량 지도' (Figma 추출 그래픽 + 클릭 영역) */
+    .slide-21 {
+        background: linear-gradient(to bottom, #F9F2EE 0%, #FDD6D5 100%);
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* 이미지가 화면 끝까지 닿도록 .scrolling-slide의 기본 패딩을 제거 */
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .saryang-map-wrap {
+        position: relative;
+        /* 16:9 비율을 유지하며 화면을 최대한 채움
+               (가로(100vw)와 세로기준 너비(100vh*16/9) 중 먼저 닿는 쪽에 맞춤) */
+        width: min(100vw, calc(100vh * 16 / 9));
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        line-height: 0;
+    }
+
+    .saryang-map-svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .slide-22 {
+        background-color: #FDD6D5;
+    }
+
+    .slide-23 {
+        width: 100%;
+        min-height: 200vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 80px 40px;
+        background-attachment: scroll;
+
+        background-color: #FDD6D5;
+    }
+
+    .ending-title-obj {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .slide-23 h2 {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 30px;
+        text-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+    }
+
+    a {
+        /* 1. 밑줄 없애기 */
+        text-decoration: none;
+
+        /* 2. 글자 색상 바꾸기 (원하는 색상 이름이나 색상코드를 적으세요) */
+        color: #333333;
+        /* 진한 회색 */
+
+        /* 3. 글자 두껍게 만들기 */
+        font-weight: bold;
+
+        padding-top: 20px;
+    }
+
+    /* 🔥 [보너스] 마우스를 올렸을 때만 반응하게 만들기 */
+    a:hover {
+        color: #FF1683;
+        /* 마우스를 올리면 붉은색으로 변함 */
+        text-decoration: underline;
+        /* 마우스를 올리면 밑줄이 생김 */
+    }
+
+    /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) PC/모바일 공통 완전 제거 */
+    section.slide-1,
+    section.slide-2,
+    section.slide-3,
+    section.slide-4,
+    section.slide-8-5,
+    section.slide-10-5,
+    section.slide-11,
+    section.slide-16-5,
+    section.slide-17,
+    section.slide-17-5,
+    section.slide-18,
+    section.slide-19,
+    section.slide-20 {
+        min-height: auto !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 12, 13, 14 슬라이드는 좌우 잘림을 막기 위해 img 태그를 사용하며, 비율에 맞게 자동으로 높이를 맞춤 */
+    section.slide-12,
+    section.slide-13,
+    section.slide-14 {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-image: none !important;
+        display: block !important;
+    }
+
+    /* ==================================================
+        [모바일 반응형] 768px 이하 화면 대응
+        ================================================== */
+    @media screen and (max-width: 768px) {
+
+        /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
+        .long-slide {
+            margin-bottom: 20vh;
+            min-height: 70vh;
+        }
+
+        .slide {
+            margin-bottom: 8vh;
+        }
+
+        .scrolling-slide,
+        .medium-slide {
+            min-height: 60vh !important;
+            padding: 40px 20px;
+        }
+
+
+
+        /* 제목 폰트 축소 */
+        .article-title {
+            font-size: 1.4rem;
+            word-break: keep-all;
+            /* 한글 단어 단위 줄바꿈 */
+        }
+
+        /* 부제목 폰트 축소 */
+        .article-desc {
+            font-size: 0.85rem;
+        }
+
+        /* 본문 인트로 폰트 축소 */
+        .scrolling-slide .intro {
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 100%;
+        }
+
+        /* h2 폰트 축소 */
+        h2,
+        .slide h2,
+        .scrolling-slide h2,
+        .medium-slide h2 {
+            font-size: 1.15rem;
+            word-break: keep-all;
+        }
+
+        /* 이미지 최대 너비 제한 축소 */
+        .title-img-obj {
+            max-width: 90%;
+        }
+
+        .wordcloud-img-obj {
+            max-width: 85%;
+        }
+
+        .cause-img-obj {
+            max-width: 95%;
+        }
+
+        .pie-chart-img-obj {
+            max-width: 95%;
+        }
+
+        .what-activity-obj {
+            max-width: 95%;
+        }
+
+        .mind-obj {
+            max-width: 95%;
+        }
+
+        .empty-obj {
+            max-width: 60%;
+        }
+
+        .title-obj {
+            max-width: 40%;
+        }
+
+        /* slide-6 텍스트 하단 여백 축소 */
+        .slide-6 .slide-content {
+            margin-bottom: 60px;
+        }
+
+        /* slide-7 패딩 축소 */
+        .slide-7 {
+            padding-top: 40px;
+        }
+
+        /* 하이라이트 라벨은 이미지에 묶여 cqw로 비례하므로 모바일에서도 자동 정렬됨
+               (별도 정적 스택 처리 불필요) */
+
+        /* 오버레이 요약 텍스트 축소 */
+        .overlay-summary h2 {
+            font-size: 1.3rem;
+        }
+
+        /* slide-8 내부 요소 위치 조정 */
+        .slide-8 h2 {
+            bottom: 20%;
+            width: 90%;
+        }
+
+        .pixel-img-obj {
+            right: 10%;
+            width: 25%;
+        }
+
+        /* slide-9 패딩 축소 */
+        .slide-9 {
+            padding-top: 40px;
+        }
+
+        .slide-9 h2 {
+            font-size: 1rem;
+        }
+
+        .slide-12 h2 {
+            top: 40%;
+            right: -8%;
+        }
+
+        .slide-13 h2 {
+            top: 45%;
+            right: -9%;
+        }
+
+        /* 스크롤 선 높이 축소 */
+        .scroll-line-container {
+            height: 30vh;
+        }
+
+        .vertical-line {
+            top: 33.2%;
+            bottom: 31.5%;
+            width: 1px;
+        }
+
+        .slide-19 h3 {
+            font-size: 1rem;
+            left: 27%;
+        }
+
+        .slide-19 h4 {
+            font-size: 1rem;
+            right: -7%;
+        }
+
+        .slide-20 h2 {
+            padding-top: 0px;
+        }
+
+        .gungseo-title {
+            font-size: 10vw !important;
+            text-shadow: 0 0 4px #FFC0DD !important;
+            letter-spacing: 0.2rem !important;
+        }
+
+    }
+
+
+    /* ==================================================
+        [초소형 모바일] 480px 이하 화면 대응
+        ================================================== */
+    @media screen and (max-width: 480px) {
+
+        .long-slide {
+            margin-bottom: 30vh;
+        }
+
+        .scrolling-slide {
+            padding: 30px 16px;
+        }
+
+        .slide {
+            margin-bottom: 8vh;
+        }
+
+        .article-title {
+            font-size: 1.15rem;
+        }
+
+        .article-desc {
+            font-size: 0.75rem;
+        }
+
+        .scrolling-slide .intro {
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
 
         h2,
         .slide h2,
         .scrolling-slide h2,
         .medium-slide h2 {
-            font-size: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .caption {
-            text-align: right;
-            font-size: 0.7rem;
-            color: #fff;
-            opacity: 57%;
-            font-weight: 300;
-        }
-
-        .slide-5 {
-            background-image: url('./배경/검정-핑크@2x.png'), linear-gradient(to bottom, #000000, #832B56);
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: flex-end;
-            position: relative;
-            /* 자식인 선을 절대 위치시키기 위해 */
-        }
-
-        .slide-6 {
-            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
-            min-height: 80.5vh !important;
-            height: 80.5vh !important;
-
-            background-image: url('./배경/연결페이지 1 (핑크)@2x.png'), linear-gradient(to bottom, #8B2B5A, #FD6B8A);
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            align-items: flex-end;
-            scroll-snap-align: end !important;
-        }
-
-        .slide-6 .slide-content {
-            margin-bottom: 150px;
-            /* 80px만큼 바닥에서 띄우기 (원하는 만큼 조절 가능) */
-        }
-
-        .slide-7 {
-            background-color: #fa6a89;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-            scroll-snap-align: center;
-        }
-
-        .slide-7 caption {
-            text-align: left;
-        }
-
-        /* 7번 슬라이드 하단에서 올라오는 검정 배경 */
-        .black-curtain-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
-            z-index: 10;
-            transform: translateY(100%);
-            /* 처음엔 화면 아래에 숨김 */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* 비교그룹 이미지 래퍼 — 글로우 라벨의 위치 기준(컨테이너). 폰트도 이 너비에 비례(cqw) */
-        .compare-group-wrap {
-            position: relative;
-            /* 확정 너비. 데스크톱 600px, 좁으면 화면에 맞춤(이미지=래퍼 너비) */
-            width: min(600px, 92vw);
-            margin: 20px auto;
-            /* 주의: container-type/contain/transform 등은 stacking context를 만들어
-               라벨이 검정 커튼 아래로 갇히므로 사용하지 않음 */
-        }
-
-        /* 커튼 뒤 이미지 글자에 정확히 포개지는 글로우 라벨 */
-        .overlay-highlight-text {
-            position: absolute;
-            /* 좌표점을 글자 중앙에 맞추기 위한 중앙 보정 */
-            transform: translate(-50%, -50%);
-            /* 이미지 너비(=min(600px,92vw))에 맞춰 글자 크기도 비례 → 모든 해상도에서 베이크 글자와 일치.
-               이미지 600px일 때 18.18px로 고정, 그보다 좁으면 화면 너비에 비례(2.79vw) */
-            font-size: min(18.18px, 2.79vw);
-            font-weight: 700;
-            white-space: nowrap;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
-            /* 하이라이트 발광 효과 */
-            opacity: 0;
-            /* 검정 커튼(z-index:10)보다 위에 보이도록 */
-            z-index: 12;
-            pointer-events: none;
-        }
-
-        /* --------------------------------------------------
-           [세부 조정 영역] 각 라벨의 위치 = 이미지 속 해당 글자의 중심점
-           (이미지 픽셀 분석으로 산출한 % 값, 단위 %)
-        -------------------------------------------------- */
-        .highlight-1 {
-            /* 개인주의와 혼자 중심 삶 선호 (Low 1행) */
-            left: 22.38%;
-            top: 56.4%;
-        }
-
-        .highlight-2 {
-            /* 연애 피로감 · 감정소모 우려 (Low 2행) */
-            left: 22.34%;
-            top: 67.22%;
-        }
-
-        .highlight-3 {
-            /* 경제적 · 현실적 부담 (High 3행) */
-            left: 77.66%;
-            top: 78.15%;
-        }
-
-        /* 오버레이 하단 요약 텍스트 */
-        /* 요약문: 화면 중앙 하단(하이라이트 텍스트 아래)에 고정 배치.
-           좌우 중앙은 left/right:0 + text-align으로 처리 → GSAP의 y(translateY)와 충돌 없음 */
-        .overlay-summary {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 70%;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(60px);
+            font-size: 1rem;
         }
 
         .overlay-summary h2 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            line-height: 1.6;
-            color: #fff;
+            font-size: 1.1rem;
         }
 
-        /* 5번과 6번을 연결하는 스크롤 선 */
-        .scroll-line-container {
-            position: absolute;
-            top: calc(100% - 40px);
-            /* 5번 슬라이드의 텍스트 아래에서 시작 */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 50vh;
-            /* 6번 슬라이드 안으로 35vh만큼 뻗어나감 */
-            background-color: rgba(255, 255, 255, 0.2);
-            /* 은은한 기본 선 */
-            z-index: 20;
-        }
-
-        .scroll-line-fill {
-            width: 100%;
-            height: 0%;
-            background-color: #fff;
-            /* 스크롤에 따라 하얗게 채워질 선 */
-        }
-
-        .scroll-line-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #fff;
-            position: absolute;
-            top: 0%;
-            /* 처음에는 위쪽에 위치 */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* 선의 중앙에 정확히 정렬 */
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            /* 약간의 빛나는 효과 */
-        }
-
-        .wordcloud-img-obj {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .cause-img-obj {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .compare-group-img-obj {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-            /* 여백은 래퍼(.compare-group-wrap)가 담당 → 이미지는 래퍼를 꽉 채움 */
-            margin: 0;
-            display: block;
-        }
-
-
-        /* slide-8 */
-        .slide-8 {
-            background-image: url('./배경/8@2x.png'), linear-gradient(to bottom, #FA6A89, #FD808C);
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            position: relative;
-            justify-content: flex-end !important;
-            scroll-snap-align: none !important;
-        }
-
-        .slide-8 .slide-content {
-            position: relative;
-            width: 100%;
-            height: 100%;
+        .slide-6 .slide-content {
+            margin-bottom: 40px;
         }
 
         .slide-8 h2 {
-            position: absolute;
-            font-size: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            margin: 0;
+            bottom: 15%;
         }
-
-        .pixel-img-obj {
-            position: absolute;
-            bottom: 0%;
-            right: 20%;
-            width: 30%;
-            max-width: 200px;
-            height: auto;
-            margin: 0;
-            display: block;
-        }
-
-        .slide-8-5 {
-            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
-            min-height: 80.5vh !important;
-            height: 80.5vh !important;
-
-            background-image: url('./배경/8.5@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            align-items: flex-end;
-            scroll-snap-align: none !important;
-        }
-
-        /* slide-9 */
-        .slide-9 {
-            background-color: #FF938E;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-            scroll-snap-align: center;
-        }
-
-        .slide-9 h2 {
-            font-size: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .pie-chart-img-obj {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-
-
-        /* slide-10 */
-        .slide-10 {
-            background-image: url('./배경/10@2x.png'), linear-gradient(to bottom, #FF938E, #FC7C8B);
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
-        .ten-question-obj {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            display: block;
-            translate: 30% !important;
-        }
-
-        .what-activity-obj {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .slide-10-5 {
-            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
-            min-height: 80.5vh !important;
-            height: 80.5vh !important;
-
-            background-image: url('./배경/10.5@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            align-items: center;
-            scroll-snap-align: none !important;
-        }
-
-
-        /* slide-11 */
-        .slide-11 {
-            background-image: url('./배경/175@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        /* slide-content 자체를 공중에 띄워 그 안의 글자들을 이미지 위로 얹음 */
-        .slide-12 .slide-content,
-        .slide-13 .slide-content,
-        .slide-14 .slide-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* 완전한 중앙 배치 */
-            z-index: 2;
-        }
-
-        .slide-12 {
-            background-image: url('./배경/12@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide-12 h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #fff;
-            text-shadow: 0 0 15px #FFFFFF;
-            text-align: left;
-
-            /* ─── 위치 조절 속성 추가 ─── */
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateX(-50%);
-            /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
-        }
-
-        .slide-13 {
-            background-image: url('./배경/13@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide-13 h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #fff;
-            text-shadow: 0 0 15px #FFFFFF;
-            text-align: left;
-
-            /* ─── 위치 조절 속성 추가 ─── */
-            position: absolute;
-            top: 50%;
-            right: 11%;
-            transform: translateX(-50%);
-            /* 좌우 정중앙 보정 공식 (top/vertical 보정은 삭제) */
-        }
-
-        .slide-14 {
-            background-image: url('./배경/14@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide-14 h2 {
-            font-size: 6rem;
-            letter-spacing: 20px;
-            color: #fff;
-            text-shadow: 0 0 15px #FFC9EC;
-        }
-
-        /* slide 15→16: '사량'을 고정한 채 배경·위아래 텍스트만 전환하는 핀 무대 (섹션 자체를 pin) */
-        .saryang-stage {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .sp-bg {
-            position: absolute;
-            inset: 0;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            z-index: 0;
-        }
-
-        .sp-bg-15 {
-            background-image: url('./배경/15@2x.png'), linear-gradient(to bottom, #000000, #95315F);
-        }
-
-        .sp-bg-16 {
-            background-image: url('./배경/16@2x.png'), linear-gradient(to bottom, #95315F, #EE6384);
-            opacity: 0;
-        }
-
-        .sp-col {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-            padding: 0 40px;
-            box-sizing: border-box;
-        }
-
-        /* 위/아래 텍스트 슬롯: 15·16 문구를 같은 칸에 겹쳐두고 전환 (사량은 고정) */
-        .sp-slot {
-            display: grid;
-        }
-
-        .sp-slot>h2 {
-            grid-area: 1 / 1;
-            margin: 0;
-        }
-
-        .sp-slot .sp-16 {
-            opacity: 0;
-        }
-
-        .sp-saryang {
-            width: 100%;
-            max-width: 150px;
-            height: auto;
-            display: block;
-        }
-
-        .slide-16-5 {
-            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
-            min-height: 80.5vh !important;
-            height: 80.5vh !important;
-
-            background-image: url('./배경/16.5@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            align-items: flex-end;
-            scroll-snap-align: none !important;
-        }
-
-        .slide-17 {
-            background-image: url('./배경/17@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .mind-obj {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-            z-index: 1;
-        }
-
-
-        .slide-17-5 {
-            /* 1. 최소 높이와 고정 높이를 모두 화면 절반(50vh)으로 강제 제한합니다 */
-            min-height: 80.5vh !important;
-            height: 80.5vh !important;
-
-            background-image: url('./배경/17.5@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            align-items: flex-end;
-            scroll-snap-align: none !important;
-        }
-
-
-        .slide-18 {
-            background-image: url('./배경/18@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .empty-obj {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-            margin: 20px auto;
-            display: block;
-            z-index: 1;
-        }
-
-        /* 1. 두 슬라이드를 감싸는 부모 상자를 공중 부양 기준점으로 설정 */
-        .slide-connector-wrapper {
-            position: relative;
-            width: 100%;
-        }
-
-        /* 2. 두 슬라이드를 관통하는 중앙 연결선 */
-        .vertical-line {
-            position: absolute;
-            top: 30.8%;
-            bottom: 30.1%;
-            left: 49%;
-            transform: translateX(-50%);
-            /* 정확히 가로 정중앙에 배치 */
-
-            width: 1.5px;
-            /* 선의 굵기 */
-            background-color: #FF1683;
-
-            /* 텍스트(z-index: 2)보다는 아래에, 배경 이미지(z-index: 1)보다는 위에 오도록 설정 */
-            z-index: 2;
-        }
-
-        .slide-19 {
-            background-image: url('./배경/19@2x.png');
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide-19 h3 {
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #FF1683;
-            text-align: left;
-
-            position: absolute;
-            top: -21%;
-            left: -7%;
-            transform: translateX(-50%);
-        }
-
-        .slide-19 h4 {
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #FF1683;
-            text-align: right;
-
-            position: absolute;
-            top: 78%;
-            right: -75%;
-            transform: translateX(-50%);
-        }
-
-        .title-obj {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-            margin: 20px auto;
-            display: block;
-        }
-
-        .slide-20 {
-            background-color: #F9F2EE;
-            background-attachment: scroll;
-            background-position: center;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide-20 h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            color: #FF1683;
-        }
-
-        /* slide-21: 다섯 팀원 인터뷰로 이어지는 '사량 지도' (Figma 추출 그래픽 + 클릭 영역) */
-        .slide-21 {
-            background: linear-gradient(to bottom, #F9F2EE 0%, #FDD6D5 100%);
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            /* 이미지가 화면 끝까지 닿도록 .scrolling-slide의 기본 패딩을 제거 */
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .saryang-map-wrap {
-            position: relative;
-            /* 16:9 비율을 유지하며 화면을 최대한 채움
-               (가로(100vw)와 세로기준 너비(100vh*16/9) 중 먼저 닿는 쪽에 맞춤) */
-            width: min(100vw, calc(100vh * 16 / 9));
-            aspect-ratio: 16 / 9;
-            margin: 0 auto;
-            line-height: 0;
-        }
-
-        .saryang-map-svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .slide-22 {
-            background-color: #FDD6D5;
-        }
-
-        .slide-23 {
-            width: 100%;
-            min-height: 200vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 80px 40px;
-            background-attachment: scroll;
-
-            background-color: #FDD6D5;
-        }
-
-        .ending-title-obj {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .slide-23 h2 {
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 30px;
-            text-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
-        }
-
-        a {
-            /* 1. 밑줄 없애기 */
-            text-decoration: none;
-
-            /* 2. 글자 색상 바꾸기 (원하는 색상 이름이나 색상코드를 적으세요) */
-            color: #333333;
-            /* 진한 회색 */
-
-            /* 3. 글자 두껍게 만들기 */
-            font-weight: bold;
-
-            padding-top: 20px;
-        }
-
-        /* 🔥 [보너스] 마우스를 올렸을 때만 반응하게 만들기 */
-        a:hover {
-            color: #FF1683;
-            /* 마우스를 올리면 붉은색으로 변함 */
-            text-decoration: underline;
-            /* 마우스를 올리면 밑줄이 생김 */
-        }
-
-        /* 배경 이미지만 있는 슬라이드들의 빈 공간(여백/패딩) PC/모바일 공통 완전 제거 */
-        section.slide-1,
-        section.slide-2,
-        section.slide-3,
-        section.slide-4,
-        section.slide-8-5,
-        section.slide-10-5,
-        section.slide-11,
-        section.slide-16-5,
-        section.slide-17,
-        section.slide-17-5,
-        section.slide-18,
-        section.slide-19,
-        section.slide-20 {
-            min-height: auto !important;
-            height: auto !important;
-            aspect-ratio: 16 / 9;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-
-        /* 12, 13, 14 슬라이드는 좌우 잘림을 막기 위해 img 태그를 사용하며, 비율에 맞게 자동으로 높이를 맞춤 */
-        section.slide-12,
-        section.slide-13,
-        section.slide-14 {
-            min-height: auto !important;
-            height: auto !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            background-image: none !important;
-            display: block !important;
-        }
-
-        /* ==================================================
-        [모바일 반응형] 768px 이하 화면 대응
-        ================================================== */
-        @media screen and (max-width: 768px) {
-
-            /* 슬라이드 간 스크롤 간격 축소 및 높이 조정 */
-            .long-slide {
-                margin-bottom: 20vh;
-                min-height: 70vh;
-            }
-
-            .slide {
-                margin-bottom: 8vh;
-            }
-
-            .scrolling-slide,
-            .medium-slide {
-                min-height: 60vh !important;
-                padding: 40px 20px;
-            }
-
-
-
-            /* 제목 폰트 축소 */
-            .article-title {
-                font-size: 1.4rem;
-                word-break: keep-all;
-                /* 한글 단어 단위 줄바꿈 */
-            }
-
-            /* 부제목 폰트 축소 */
-            .article-desc {
-                font-size: 0.85rem;
-            }
-
-            /* 본문 인트로 폰트 축소 */
-            .scrolling-slide .intro {
-                font-size: 1rem;
-                line-height: 1.7;
-                max-width: 100%;
-            }
-
-            /* h2 폰트 축소 */
-            h2,
-            .slide h2,
-            .scrolling-slide h2,
-            .medium-slide h2 {
-                font-size: 1.15rem;
-                word-break: keep-all;
-            }
-
-            /* 이미지 최대 너비 제한 축소 */
-            .title-img-obj {
-                max-width: 90%;
-            }
-
-            .wordcloud-img-obj {
-                max-width: 85%;
-            }
-
-            .cause-img-obj {
-                max-width: 95%;
-            }
-
-            .pie-chart-img-obj {
-                max-width: 95%;
-            }
-
-            .what-activity-obj {
-                max-width: 95%;
-            }
-
-            .mind-obj {
-                max-width: 95%;
-            }
-
-            .empty-obj {
-                max-width: 60%;
-            }
-
-            .title-obj {
-                max-width: 40%;
-            }
-
-            /* slide-6 텍스트 하단 여백 축소 */
-            .slide-6 .slide-content {
-                margin-bottom: 60px;
-            }
-
-            /* slide-7 패딩 축소 */
-            .slide-7 {
-                padding-top: 40px;
-            }
-
-            /* 하이라이트 라벨은 이미지에 묶여 cqw로 비례하므로 모바일에서도 자동 정렬됨
-               (별도 정적 스택 처리 불필요) */
-
-            /* 오버레이 요약 텍스트 축소 */
-            .overlay-summary h2 {
-                font-size: 1.3rem;
-            }
-
-            /* slide-8 내부 요소 위치 조정 */
-            .slide-8 h2 {
-                bottom: 20%;
-                width: 90%;
-            }
-
-            .pixel-img-obj {
-                right: 10%;
-                width: 25%;
-            }
-
-            /* slide-9 패딩 축소 */
-            .slide-9 {
-                padding-top: 40px;
-            }
-
-            .slide-9 h2 {
-                font-size: 1rem;
-            }
-
-            .slide-12 h2 {
-                top: 40%;
-                right: -8%;
-            }
-
-            .slide-13 h2 {
-                top: 45%;
-                right: -9%;
-            }
-
-            /* 스크롤 선 높이 축소 */
-            .scroll-line-container {
-                height: 30vh;
-            }
-
-            .vertical-line {
-                top: 33.2%;
-                bottom: 31.5%;
-                width: 1px;
-            }
-
-            .slide-19 h3 {
-                font-size: 1rem;
-                left: 27%;
-            }
-
-            .slide-19 h4 {
-                font-size: 1rem;
-                right: -7%;
-            }
-
-            .slide-20 h2 {
-                padding-top: 0px;
-            }
-
-            .gungseo-title {
-                font-size: 10vw !important;
-                text-shadow: 0 0 4px #FFC0DD !important;
-                letter-spacing: 0.2rem !important;
-            }
-
-        }
-
-
-        /* ==================================================
-        [초소형 모바일] 480px 이하 화면 대응
-        ================================================== */
-        @media screen and (max-width: 480px) {
-
-            .long-slide {
-                margin-bottom: 30vh;
-            }
-
-            .scrolling-slide {
-                padding: 30px 16px;
-            }
-
-            .slide {
-                margin-bottom: 8vh;
-            }
-
-            .article-title {
-                font-size: 1.15rem;
-            }
-
-            .article-desc {
-                font-size: 0.75rem;
-            }
-
-            .scrolling-slide .intro {
-                font-size: 0.9rem;
-                line-height: 1.65;
-            }
-
-            h2,
-            .slide h2,
-            .scrolling-slide h2,
-            .medium-slide h2 {
-                font-size: 1rem;
-            }
-
-            .overlay-summary h2 {
-                font-size: 1.1rem;
-            }
-
-            .slide-6 .slide-content {
-                margin-bottom: 40px;
-            }
-
-            .slide-8 h2 {
-                bottom: 15%;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // 각각의 글자 요소들을 배열로 가져와 스크롤 센서를 부착합니다
-            gsap.utils.toArray(".reveal-text").forEach((text) => {
-                gsap.to(text, {
-                    scrollTrigger: {
-                        trigger: text,          // 애니메이션이 시작될 기준점 (글자 자체 또는 부모 슬라이드)
-                        start: "top 70%",       // 글자가 화면 아래에서 85% 지점에 도달했을 때 실행
-
-                        // 💡 모바일 최적화 팁: 터치 환경에서 렉을 유발하는 scrub 대신 
-                        // 화면 진입 시 단발성으로 깔끔하게 실행되는 toggleActions를 채택합니다.
-                        toggleActions: "play none none reverse"
-                    },
-                    opacity: 1,                 // 선명해지게 만들기
-                    transform: "translateY(0)", // 원래 위치로 복귀
-                    duration: 3,                // 1초 동안 부드럽게 연출
-                    ease: "power2.out"
-                });
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 각각의 글자 요소들을 배열로 가져와 스크롤 센서를 부착합니다
+        gsap.utils.toArray(".reveal-text").forEach((text) => {
+            gsap.to(text, {
+                scrollTrigger: {
+                    trigger: text,          // 애니메이션이 시작될 기준점 (글자 자체 또는 부모 슬라이드)
+                    start: "top 70%",       // 글자가 화면 아래에서 85% 지점에 도달했을 때 실행
+
+                    // 💡 모바일 최적화 팁: 터치 환경에서 렉을 유발하는 scrub 대신 
+                    // 화면 진입 시 단발성으로 깔끔하게 실행되는 toggleActions를 채택합니다.
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 1,                 // 선명해지게 만들기
+                transform: "translateY(0)", // 원래 위치로 복귀
+                duration: 3,                // 1초 동안 부드럽게 연출
+                ease: "power2.out"
             });
         });
-    </script>
+    });
+</script>
 </head>
 
 <body>
